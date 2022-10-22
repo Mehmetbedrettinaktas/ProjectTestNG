@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class SpendingGoodPage {
 
 
@@ -15,6 +17,82 @@ public class SpendingGoodPage {
         }
 // ******************  Fatma Hanim ***************************
 
+        // SIGN IN //
+
+        @FindBy(css = ".login.inline-type")
+        public static WebElement ilksignButton;
+
+        @FindBy(xpath = "//*[@id='username']")
+        public static WebElement SignemailBox;
+
+        @FindBy(css = "#password")
+        public WebElement passwordBox;
+
+        @FindBy(css = ".woocommerce-form-login__submit")
+        public WebElement ikinciSignIn;
+        @FindBy(xpath = "(//a[.='My Account'])[1]")
+        public static WebElement myAccountLink;
+
+        @FindBy(css = "div>h2.page-title")
+        public static WebElement myAccountTitle;
+        //MY ACCOUNT LISTE YAZDIRMA LOCATELERI //
+        @FindBy(css = ".icon-box.text-center>a>p")
+        public static List<WebElement> myAccountPageList;
+
+        @FindBy(css = ".woocommerce-MyAccount-navigation>ul>li")
+        public static List<WebElement> dashboardList;
+
+        //REGISTER LOCATELERI ///
+
+        @FindBy(css = ".register.inline-type")
+        public static WebElement register;
+        @FindBy(xpath = "//*[text()='Become a Vendor']  ")
+        public static WebElement BecomeVendor;
+        @FindBy(xpath = "//*[@id='user_email']")
+        public static WebElement EmailBox;
+        @FindBy(css = "#passoword")
+        public static WebElement PasswordBox;
+        @FindBy(xpath = " //input[@id='passoword'] ")
+        public static WebElement ConfirmPwdBox;
+        @FindBy(css = ".wcfm_email_verified_input")
+        public static WebElement verificationCodeBox;
+        @FindBy(css = ".wcfm-message.wcfm-success")
+        public static WebElement registrationSuccessfully;
+        @FindBy(xpath = "//*[.='Not right now']")
+        public static WebElement notRightNowButton;
+        @FindBy(css = ".page-title")
+        public static WebElement storeManagerTitle;
+        @FindBy(xpath = "//*[@id=\"wcfm_menu\"]/div[18]/a/span[2]")
+        public static WebElement LogoutButton;
+
+
+        /////VENDOR HESABI NEGATIF TESTLER ICIN  ////
+
+        @FindBy(xpath = "//input[@id='wcfm_membership_register_button']")
+        public static WebElement registerbutton;
+        @FindBy(xpath = "//*[text()='Email: This field is required.']")
+        public static WebElement bosEmailHataMesaji;
+
+        @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
+        public static WebElement gecersizEmailHataMesaji;
+
+        @FindBy(xpath ="//*[text()='Registration Successfully Completed.']")
+        public static WebElement gecersizPasswordHataliMesaji;
+
+        /////////////////////////////////////////////////////////////
+        //verification code div.email method classi
+        @FindBy(css = "div.email")
+        public static WebElement geciciEmail;
+        @FindBy(css = "a#renew")
+        public WebElement emailBoxRefresh;
+        @FindBy(xpath = "//tbody//tr[1]")
+        public static WebElement geciciEmailBox;
+        @FindBy(xpath = "//tbody//tr[2]")
+        public WebElement onayEmail;
+        @FindBy(xpath = "//*[@id='body_content_inner']")
+        public static WebElement verificationCode;
+        @FindBy(xpath = "//*[.='Visit now ...']")
+        public WebElement visitNow;
 
 
 
