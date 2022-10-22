@@ -13,6 +13,7 @@ import org.testng.asserts.SoftAssert;
 import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ResuableMethods;
 
 import java.time.Duration;
 
@@ -30,6 +31,7 @@ public class US010_TC001_TC002_TC003 {
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         //2.Kullanici Sign In buttonuna tiklayarak sign In sayfasina gorebilmeli
         sgp.signIn.click();
+
         //3. Kullanici gecerli bir Kullanici adi veya gecerli email adresi girebilmeli
         sgp.userName.sendKeys(ConfigReader.getProperty("user"), Keys.TAB);
         //4.Kullanici gecerli bir password ile sayfaya giris yapabilmeli
@@ -40,14 +42,14 @@ public class US010_TC001_TC002_TC003 {
         sgp.myAccount.click();
         String expectedResult="My Account";
         String actualResult=Driver.getDriver().getTitle();
-        softAssert.assertEquals(expectedResult,actualResult);
+        softAssert.assertTrue(actualResult.contains(expectedResult));
         Thread.sleep(3000);
         //6. Kullanici Store Manger sekmesini tiklayabilmeli
         sgp.storeManager.click();
         //7.Kullanici Store Manager sayfasini gormeli
         String expectedYaziElementi="Store Manager";
         String actualYaziElementi=Driver.getDriver().getTitle();
-        softAssert.assertEquals(expectedYaziElementi,actualYaziElementi);
+        softAssert.assertTrue(actualYaziElementi.contains(expectedYaziElementi));
         //8. Kullanici Products sekmesindeki addNew butonunu tiklayabilmeli
         sgp.products.click();
         WebElement addNew=wait.until(ExpectedConditions.visibilityOf(sgp.addNew));
@@ -59,16 +61,18 @@ public class US010_TC001_TC002_TC003 {
         //10. kullanici Attributes sekmesini tiklayabilmeli
         sgp.attributes.click();
         //11. kullanici Attributes basligi altinda Color secenegi gorebilmeli
-        sgp.colorButton.isDisplayed();
+        sgp.colorRadioButton.click();
+
         //12. Kullanici istedigi rengi secebilmeli
-        sgp.colorButton.click();
+        //sgp.colorRadioButton.click();
+        ResuableMethods.waitFor(2);
         //sgp.colordropDownOk.click();
-        sgp.colorDdmSurchBox.click();
-        WebElement dropDownColor=Driver.getDriver().findElement(By.xpath("(//input[@class='select2-search__field'])[2]"));
+       // sgp.colorDdmSurchBox.click();
+        WebElement dropDownColor=sgp.colordropDownDown;
         select=new Select(dropDownColor);
         select.selectByVisibleText("Black");
-        sgp.attributesSubmitButton.click();
-
+        softAssert.assertEquals(select.getFirstSelectedOption().getText(),"Black");
+        //System.out.println(select.getFirstSelectedOption().getText());
         softAssert.assertAll();
         Driver.closeDriver();
 
@@ -89,29 +93,32 @@ public class US010_TC001_TC002_TC003 {
         sgp.myAccount.click();
         String expectedResult="My Account";
         String actualResult=Driver.getDriver().getTitle();
-        softAssert.assertEquals(expectedResult,actualResult);
+        softAssert.assertTrue(actualResult.contains(expectedResult));
         Thread.sleep(3000);
         //6. Kullanici Store Manger sekmesini tiklayabilmeli
         sgp.storeManager.click();
         //7.Kullanici Store Manager sayfasini gormeli
         String expectedYaziElementi="Store Manager";
         String actualYaziElementi=Driver.getDriver().getTitle();
-        softAssert.assertEquals(expectedYaziElementi,actualYaziElementi);
-        //8. Kullanici Products sekmesini tiklayabilmeli
+        softAssert.assertTrue(actualYaziElementi.contains(expectedYaziElementi));
+        //8. Kullanici Products sekmesindeki addNew butonunu tiklayabilmeli
         sgp.products.click();
         WebElement addNew=wait.until(ExpectedConditions.visibilityOf(sgp.addNew));
         addNew.click();
+        Thread.sleep(2000);
         //9. Kullanici acilan listesdede Attributes sacenegi gorebilmeli
         actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.SPACE).perform();
         sgp.attributes.isDisplayed();
         //10. kullanici Attributes sekmesini tiklayabilmeli
         sgp.attributes.click();
         //11. kullanici Attributes basligi altinda Size secenegi gorebilmeli
-        sgp.sizeButton.isDisplayed();
+        sgp.sizeRadioButton.click();
         //12. Kullanici istedigi Size'i secebilmeli
-        sgp.sizeButton.click();
-
+        WebElement dropDownSize=sgp.sizeDdm;
+        select=new Select(dropDownSize);
+        select.selectByVisibleText("Large");
+        softAssert.assertEquals(select.getFirstSelectedOption().getText(),"Large");
         softAssert.assertAll();
-        // Driver.closeDriver();
+         Driver.closeDriver();
     }
 }
