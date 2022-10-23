@@ -10,9 +10,9 @@ import java.util.List;
 public class SpendingGoodPage {
 
 
-        public SpendingGoodPage(){
+        public SpendingGoodPage() {
 
-            PageFactory.initElements(Driver.getDriver(),this);
+                PageFactory.initElements(Driver.getDriver(), this);
 
         }
 // ******************  Fatma Hanim ***************************
@@ -76,7 +76,7 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
         public static WebElement gecersizEmailHataMesaji;
 
-        @FindBy(xpath ="//*[text()='Registration Successfully Completed.']")
+        @FindBy(xpath = "//*[text()='Registration Successfully Completed.']")
         public static WebElement gecersizPasswordHataliMesaji;
 
         /////////////////////////////////////////////////////////////
@@ -95,88 +95,105 @@ public class SpendingGoodPage {
         public WebElement visitNow;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // ************ Mihrican Hanim ************
+
+
+
+        @FindBy(xpath = "//*[@value='Sign In']")
+        public WebElement userpassSignIn;
+        @FindBy(xpath = "//a[text()='Orders']")
+        public WebElement orders;
+        @FindBy(xpath = "//*[@name='add-to-cart']")
+        public WebElement addToCart;
+        @FindBy(xpath = "(//i[@class='w-icon-cart'])[1]")
+        public WebElement cartButton;
+        @FindBy(xpath = "//*[.='Checkout']")
+        public WebElement checkout;
+        @FindBy(xpath = "//a[@class='button wc-forward']")
+        public WebElement viewCart;
+        @FindBy(xpath = "//button[@name='apply_coupon']")
+        public WebElement applyButton;
+        @FindBy(xpath = "//p[@class='woocommerce-shipping-destination']")
+        public WebElement shippinginfo;
+        @FindBy(xpath = "//a[@class='checkout-button button alt wc-forward']")
+        public WebElement procedToCheckOut;
+        @FindBy(xpath = "//*[text()='Continue Shopping']")
+        public WebElement continueShopping;
+        @FindBy(xpath = "//button[@name='clear_cart']")
+        public WebElement clearCartButton;
+        @FindBy(xpath = "//p[text()='Your cart is currently empty.']")
+        public WebElement ClearTextYazisi;
+        @FindBy(xpath = "//p[text()='No products in the cart.']")
+        public WebElement cartNoProductsYazisi;
+        @FindBy(xpath = "(//input[@class='form-control'])[1]")
+        public WebElement search;
+        @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div[4]/ul/li[1]/div/div/h3/a")
+        public WebElement tShirt;
+        @FindBy(xpath = "//*[@title='Plus']")
+        public WebElement plus;
+        @FindBy(xpath = "(//i[@class='w-icon-cart'])[1]")
+        public WebElement cart;
+        @FindBy(xpath = "//input[@name='billing_first_name']")
+        public WebElement firstName;
+        @FindBy(xpath = "//button[@id='place_order']")
+        public WebElement placeOrder;
+        @FindBy(xpath = "//*[text()='Thank you. Your order has been received.']")
+        public WebElement thankYou;
+        @FindBy(xpath = "//li[@class='wc_payment_method payment_method_cod']")
+        public WebElement payAtTheDoor;
+        @FindBy(xpath = "//input[@name='billing_last_name']")
+        public WebElement lastName;
+        @FindBy(xpath = "//input[@name='billing_company']")
+        public WebElement companyName;
+        @FindBy(xpath = "//select[@id='billing_country']")
+        public WebElement country;
+        @FindBy(xpath = "//input[@id='billing_postcode']")
+        public WebElement postcode;
+        @FindBy(xpath = "//input[@id='billing_city']")
+        public WebElement town;
+        @FindBy(xpath = "//select[@id='billing_state']")
+        public WebElement state;
+        @FindBy(xpath = "//input[@id='billing_phone']")
+        public WebElement phone;
+        @FindBy(xpath = "//input[@id='billing_email']")
+        public WebElement emailCheckout;
+        @FindBy(xpath = "//*[@id='order_comments']")
+        public WebElement orderNotes;
+        @FindBy(xpath = "//*[text()='Product']")
+        public WebElement myOrderproduct;
+        @FindBy(xpath = "//*[text()='Price']")
+        public WebElement myOrderPrice;
+        @FindBy(xpath = "//*[text()='Quantity']")
+        public WebElement myOrderQuantity;
+        @FindBy(xpath = "//*[text()='Subtotal']")
+        public WebElement myOrderSubTotal;
+        @FindBy(xpath = "//button[@title='Minus']")
+        public WebElement minusButton;
+        @FindBy(xpath = "//div[@id='product-14989']")
+        public WebElement superKahramanOyuncak;
+        @FindBy(xpath = "//div[@id='product-15375']")
+        public WebElement hoparlor;
+        @FindBy(xpath = "//div[@id='product-15391']")
+        public WebElement arcelik;
+        @FindBy(xpath = "//div[@id='product-14986']")
+        public WebElement kalemlik;
+        @FindBy(xpath = "(//span[@class='quantity'])[1]")
+        public WebElement artieksiKutu;
+        @FindBy(xpath = "//*[@name='update_cart']")
+        public WebElement updateCartButton;
+
+        @FindBy(xpath = "//p[@class='stock in-stock']")
+        public WebElement ilkinStokInformation;
+
+        @FindBy(xpath = "//input[@type='number']")
+        public WebElement sonInStokInformation;
+
+
+
+
+
+
+
 
 
 
