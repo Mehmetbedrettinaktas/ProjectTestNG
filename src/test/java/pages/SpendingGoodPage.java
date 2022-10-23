@@ -276,92 +276,92 @@ public class SpendingGoodPage {
 
 
         // ************ Sirin Hanim ************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //US_005
+
+        @FindBy(xpath = "//tbody")
+        public WebElement urunListe;
+        @FindBy(xpath = "//*[@aria-label='Status']")
+        public WebElement status;
+        @FindBy(xpath = "//*[@aria-label='Stock']")
+        public WebElement stock;
+        @FindBy(xpath = "//*[@aria-label='Price: activate to sort column ascending']")
+        public WebElement price;
+        @FindBy(xpath = "//*[@aria-label='Date: activate to sort column ascending']")
+        public WebElement date;
+        @FindBy(xpath = "(//span[text()='Add New'])[1]")
+        public WebElement addNewButonu;
+        @FindBy(xpath = "//input[@id='is_virtual']")
+        public WebElement virtualButonu;
+        @FindBy(xpath = "//input[@id='is_downloadable']")
+        public WebElement downloadableButonu;
+        @FindBy(xpath = "//input[@id='pro_title']")
+        public WebElement productTitle;
+        @FindBy(xpath = "//input[@id='regular_price']")
+        public WebElement priceSekmesi;
+        @FindBy(xpath = "//img[@id='featured_img_display']")
+        public WebElement buyukBosResimIkonu;
+        @FindBy(xpath = "//button[@id='menu-item-browse']")
+        public WebElement mediaLibrary;
+        @FindBy(xpath = "(//*[@class='thumbnail'])[2]")
+        public WebElement foto1;
+        @FindBy(xpath = "//button[text()='Select']")
+        public WebElement selectButonu;
+        @FindBy(xpath = "//img[@id='gallery_img_gimage_0_display']")
+        public WebElement kucukBosResimIkonu;
+        @FindBy(xpath = "(//div[@class='thumbnail'])[16]")
+        public WebElement foto2;
+        @FindBy(xpath = "(//button[text()='Add to Gallery'])[2]")
+        public WebElement addToGallery;
+        @FindBy(xpath = "//input[@value='401']")
+        public WebElement categories;
+        @FindBy(xpath = "//input[@value='335']")
+        public WebElement brands;
+        @FindBy(xpath = "//*[@data-id='excerpt']")
+        public WebElement shortDescription;
+        @FindBy(xpath = "//*[@data-id='description']")
+        public WebElement longDescription;
+        @FindBy(xpath = "//input[@name='submit-data']")
+        public WebElement submitButton;
+
+        // US_006
+
+        @FindBy(xpath = "//input[@value='225']")
+        public WebElement BestSeller;
+        @FindBy(xpath = "//input[@value='235']")
+        public WebElement HealthAndBeauty;
+        @FindBy(xpath = "//input[@value='230']")
+        public WebElement Electronics;
+        @FindBy(xpath = "//input[@value='228']")
+        public WebElement HomeAndGarden;
+        @FindBy(xpath = "//input[@value='227']")
+        public WebElement Trending;
+        @FindBy(xpath = "//input[@value='232']")
+        public WebElement BooksMusicFilm;
+        @FindBy(xpath = "//input[@value='344']")
+        public WebElement Fashion;
+        @FindBy(xpath = "//input[@value='405']")
+        public WebElement Games;
+        @FindBy(xpath = "//input[@value='229']")
+        public WebElement Accessories;
+        @FindBy(xpath = "//input[@value='226']")
+        public WebElement NewArrivals;
+
+        // US_007
+
+        @FindBy(xpath = "//input[@value='35']")
+        public WebElement ElegantAutoGroup;
+        @FindBy(xpath = "//input[@value='41']")
+        public WebElement GreenGrass;
+        @FindBy(xpath = "//input[@value='46']")
+        public WebElement NodeJS;
+        @FindBy(xpath = "//input[@value='47']")
+        public WebElement NS8;
+        @FindBy(xpath = "//input[@value='50']")
+        public WebElement RED;
+        @FindBy(xpath = "//input[@value='52']")
+        public WebElement SkysuiteTech;
+        @FindBy(xpath = "//input[@value='55']")
+        public WebElement Sterling;
 
 
 
