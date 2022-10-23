@@ -79,7 +79,6 @@ public class SpendingGoodPage {
         @FindBy(xpath ="//*[text()='Registration Successfully Completed.']")
         public static WebElement gecersizPasswordHataliMesaji;
 
-      
         //verification code div.email method classi
         @FindBy(css = "div.email")
         public static WebElement geciciEmail;
