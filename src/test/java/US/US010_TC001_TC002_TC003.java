@@ -1,6 +1,5 @@
 package US;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -13,7 +12,8 @@ import org.testng.asserts.SoftAssert;
 import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ResuableMethods;
+import utilities.ReusableMethods;
+
 
 import java.time.Duration;
 
@@ -65,7 +65,7 @@ public class US010_TC001_TC002_TC003 {
 
         //12. Kullanici istedigi rengi secebilmeli
         //sgp.colorRadioButton.click();
-        ResuableMethods.waitFor(2);
+        ReusableMethods.waitFor(2);
         //sgp.colordropDownOk.click();
        // sgp.colorDdmSurchBox.click();
         WebElement dropDownColor=sgp.colordropDownDown;

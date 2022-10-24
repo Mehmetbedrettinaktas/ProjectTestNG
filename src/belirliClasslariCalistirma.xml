@@ -10,8 +10,8 @@
 <suite name="istenen class'lari calistirma">
     <test name="classlar">
         <classes>
-            <class name="tests.day16_notations.C03_Priority"/>
-            <class name="tests.day17_pom.C01_DriverIlkClass"/>
+            <class name="US.day16_notations.C03_Priority"/>
+            <class name="US.day17_pom.C01_DriverIlkClass"/>
         </classes>
     </test>
 </suite>

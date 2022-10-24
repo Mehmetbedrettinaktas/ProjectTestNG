@@ -17,6 +17,81 @@ public class SpendingGoodPage {
         }
 // ******************  Fatma Hanim ***************************
 
+        // SIGN IN //
+
+        @FindBy(css = ".login.inline-type")
+        public static WebElement ilksignButton;
+
+        @FindBy(xpath = "//*[@id='username']")
+        public static WebElement SignemailBox;
+
+        @FindBy(css = "#password")
+        public WebElement passwordBox;
+
+        @FindBy(css = ".woocommerce-form-login__submit")
+        public WebElement ikinciSignIn;
+        @FindBy(xpath = "(//a[.='My Account'])[1]")
+        public static WebElement myAccountLink;
+
+        @FindBy(css = "div>h2.page-title")
+        public static WebElement myAccountTitle;
+        //MY ACCOUNT LISTE YAZDIRMA LOCATELERI //
+        @FindBy(css = ".icon-box.text-center>a>p")
+        public static List<WebElement> myAccountPageList;
+
+        @FindBy(css = ".woocommerce-MyAccount-navigation>ul>li")
+        public static List<WebElement> dashboardList;
+
+        //REGISTER LOCATELERI ///
+
+        @FindBy(css = ".register.inline-type")
+        public static WebElement register;
+        @FindBy(xpath = "//*[text()='Become a Vendor']  ")
+        public static WebElement BecomeVendor;
+        @FindBy(xpath = "//*[@id='user_email']")
+        public static WebElement EmailBox;
+        @FindBy(css = "#passoword")
+        public static WebElement PasswordBox;
+        @FindBy(xpath = " //input[@id='passoword'] ")
+        public static WebElement ConfirmPwdBox;
+        @FindBy(css = ".wcfm_email_verified_input")
+        public static WebElement verificationCodeBox;
+        @FindBy(css = ".wcfm-message.wcfm-success")
+        public static WebElement registrationSuccessfully;
+        @FindBy(xpath = "//*[.='Not right now']")
+        public static WebElement notRightNowButton;
+        @FindBy(css = ".page-title")
+        public static WebElement storeManagerTitle;
+        @FindBy(xpath = "//*[@id=\"wcfm_menu\"]/div[18]/a/span[2]")
+        public static WebElement LogoutButton;
+
+
+        /////VENDOR HESABI NEGATIF TESTLER ICIN  ////
+
+        @FindBy(xpath = "//input[@id='wcfm_membership_register_button']")
+        public static WebElement registerbutton;
+        @FindBy(xpath = "//*[text()='Email: This field is required.']")
+        public static WebElement bosEmailHataMesaji;
+
+        @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
+        public static WebElement gecersizEmailHataMesaji;
+
+        @FindBy(xpath ="//*[text()='Registration Successfully Completed.']")
+        public static WebElement gecersizPasswordHataliMesaji;
+
+        //verification code div.email method classi
+        @FindBy(css = "div.email")
+        public static WebElement geciciEmail;
+        @FindBy(css = "a#renew")
+        public WebElement emailBoxRefresh;
+        @FindBy(xpath = "//tbody//tr[1]")
+        public static WebElement geciciEmailBox;
+        @FindBy(xpath = "//tbody//tr[2]")
+        public WebElement onayEmail;
+        @FindBy(xpath = "//*[@id='body_content_inner']")
+        public static WebElement verificationCode;
+        @FindBy(xpath = "//*[.='Visit now ...']")
+        public WebElement visitNow;
 
 
 
@@ -200,92 +275,92 @@ public class SpendingGoodPage {
 
 
         // ************ Sirin Hanim ************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //US_005
+
+        @FindBy(xpath = "//tbody")
+        public WebElement urunListe;
+        @FindBy(xpath = "//*[@aria-label='Status']")
+        public WebElement status;
+        @FindBy(xpath = "//*[@aria-label='Stock']")
+        public WebElement stock;
+        @FindBy(xpath = "//*[@aria-label='Price: activate to sort column ascending']")
+        public WebElement price;
+        @FindBy(xpath = "//*[@aria-label='Date: activate to sort column ascending']")
+        public WebElement date;
+        @FindBy(xpath = "(//span[text()='Add New'])[1]")
+        public WebElement addNewButonu;
+        @FindBy(xpath = "//input[@id='is_virtual']")
+        public WebElement virtualButonu;
+        @FindBy(xpath = "//input[@id='is_downloadable']")
+        public WebElement downloadableButonu;
+        @FindBy(xpath = "//input[@id='pro_title']")
+        public WebElement productTitle;
+        @FindBy(xpath = "//input[@id='regular_price']")
+        public WebElement priceSekmesi;
+        @FindBy(xpath = "//img[@id='featured_img_display']")
+        public WebElement buyukBosResimIkonu;
+        @FindBy(xpath = "//button[@id='menu-item-browse']")
+        public WebElement mediaLibrary;
+        @FindBy(xpath = "(//*[@class='thumbnail'])[2]")
+        public WebElement foto1;
+        @FindBy(xpath = "//button[text()='Select']")
+        public WebElement selectButonu;
+        @FindBy(xpath = "//img[@id='gallery_img_gimage_0_display']")
+        public WebElement kucukBosResimIkonu;
+        @FindBy(xpath = "(//div[@class='thumbnail'])[16]")
+        public WebElement foto2;
+        @FindBy(xpath = "(//button[text()='Add to Gallery'])[2]")
+        public WebElement addToGallery;
+        @FindBy(xpath = "//input[@value='401']")
+        public WebElement categories;
+        @FindBy(xpath = "//input[@value='335']")
+        public WebElement brands;
+        @FindBy(xpath = "//*[@data-id='excerpt']")
+        public WebElement shortDescription;
+        @FindBy(xpath = "//*[@data-id='description']")
+        public WebElement longDescription;
+        @FindBy(xpath = "//input[@name='submit-data']")
+        public WebElement submitButton;
+
+        // US_006
+
+        @FindBy(xpath = "//input[@value='225']")
+        public WebElement BestSeller;
+        @FindBy(xpath = "//input[@value='235']")
+        public WebElement HealthAndBeauty;
+        @FindBy(xpath = "//input[@value='230']")
+        public WebElement Electronics;
+        @FindBy(xpath = "//input[@value='228']")
+        public WebElement HomeAndGarden;
+        @FindBy(xpath = "//input[@value='227']")
+        public WebElement Trending;
+        @FindBy(xpath = "//input[@value='232']")
+        public WebElement BooksMusicFilm;
+        @FindBy(xpath = "//input[@value='344']")
+        public WebElement Fashion;
+        @FindBy(xpath = "//input[@value='405']")
+        public WebElement Games;
+        @FindBy(xpath = "//input[@value='229']")
+        public WebElement Accessories;
+        @FindBy(xpath = "//input[@value='226']")
+        public WebElement NewArrivals;
+
+        // US_007
+
+        @FindBy(xpath = "//input[@value='35']")
+        public WebElement ElegantAutoGroup;
+        @FindBy(xpath = "//input[@value='41']")
+        public WebElement GreenGrass;
+        @FindBy(xpath = "//input[@value='46']")
+        public WebElement NodeJS;
+        @FindBy(xpath = "//input[@value='47']")
+        public WebElement NS8;
+        @FindBy(xpath = "//input[@value='50']")
+        public WebElement RED;
+        @FindBy(xpath = "//input[@value='52']")
+        public WebElement SkysuiteTech;
+        @FindBy(xpath = "//input[@value='55']")
+        public WebElement Sterling;
 
 
 
@@ -710,26 +785,86 @@ public class SpendingGoodPage {
 
 
         // ************ Abdurrahim Bey ***************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        @FindBy(xpath = "//*[text()='Sign In ']")
+        public WebElement signIn1;
+        @FindBy(xpath = "//span[contains(text(),'Refund')]")
+        public WebElement refund;
+        @FindBy(id = "wcfm-refund-requests_next")
+        public WebElement nextButton;
+        @FindBy(xpath = "//tbody//tr//td[2]")
+        public List<WebElement> requestIDlist;
+        @FindBy(xpath = "//tbody//tr//td[3]")
+        public List<WebElement> orderIDlist;
+        @FindBy(xpath = "//tbody//tr//td[4]")
+        public List<WebElement> amountList;
+        @FindBy(xpath = "//tbody//tr//td[5]")
+        public List<WebElement> typeIDlist;
+        @FindBy(xpath = "//tbody//tr//td[6]")
+        public List<WebElement> reasonList;
+        @FindBy (xpath = "(//input[@class='form-control'])[1]")
+        public WebElement search;
+        @FindBy (xpath = "//*[@id=\"main\"]/div/div/div/div[4]/ul/li[1]/div/div/h3/a")
+        public WebElement tShirt;
+        @FindBy (xpath = "//*[@title='Plus']")
+        public WebElement plus;
+        @FindBy (xpath = "//button[@name='add-to-cart']")
+        public WebElement addToCart;
+        @FindBy (xpath = "(//i[@class='w-icon-cart'])[1]")
+        public WebElement cart;
+        @FindBy (xpath = "//*[.='Checkout']")
+        public WebElement checkout;
+        @FindBy (xpath = "//input[@name='billing_first_name']")
+        public WebElement firstName;
+        @FindBy (xpath = "//button[@id='place_order']")
+        public WebElement placeOrder;
+        @FindBy(xpath = "//li[@class='wc_payment_method payment_method_cod']")
+        public WebElement payAtTheDoor;
+        @FindBy(xpath = "//input[@name='billing_last_name']")
+        public WebElement lastName;
+        @FindBy(xpath = "//input[@name='billing_company']")
+        public WebElement companyName;
+        @FindBy(xpath = "//select[@id='billing_country']")
+        public WebElement country;
+        @FindBy(xpath = "//input[@id='billing_address_1']")
+        public WebElement streetAddress;
+        @FindBy(xpath = "//input[@id='billing_address_2']")
+        public WebElement streetAddress_2;
+        @FindBy(xpath = "//input[@id='billing_postcode']")
+        public WebElement postcode;
+        @FindBy(xpath = "//input[@id='billing_city']")
+        public WebElement town;
+        @FindBy(xpath = "//select[@id='billing_state']")
+        public WebElement state;
+        @FindBy(xpath = "//input[@id='billing_phone']")
+        public WebElement phone;
+        @FindBy(xpath = "//input[@id='billing_email']")
+        public WebElement emailCheckout;
+        @FindBy (xpath= "//*[text()='Thank you. Your order has been received.']")
+        public WebElement thankYou;
+        @FindBy(xpath = "//a[@class='login logout inline-type']")
+        public WebElement signOut;
+        @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/nav/ul/li[10]/a")
+        public WebElement logOut2;
+        @FindBy (xpath= "(//*[contains(text(),'Orders')])[1]")
+        public WebElement ordersStoreManager;
+        @FindBy (xpath= "(//span[@data-tip='Mark as Complete'])[1]")
+        public WebElement markAsComplete;
+        @FindBy (xpath= "(//*[@data-tip='View Details'])[1]")
+        public WebElement viewDetails;
+        @FindBy (xpath= "(//*[@data-tip='Refund Request'])[1]")
+        public WebElement refundRequest;
+        @FindBy (xpath= "//select[@id='wcfm_refund_request']")
+        public WebElement requestMode;
+        @FindBy (xpath = "//*[@name='wcfm_refund_reason']")
+        public WebElement refundRequestsReason;
+        @FindBy (xpath = "//input[@name='submit']")
+        public WebElement submitRefund;
+        @FindBy (xpath = "//*[@class='wcfm-message wcfm-success']")
+        public WebElement refundSucces;
+        @FindBy(xpath = "//span[contains(text(),'Followers')]")
+        public WebElement followers;
+        @FindBy (xpath = "//*[@class='dataTables_empty']")
+        public WebElement nameEmailActions;
 
 
 

@@ -22,8 +22,8 @@ sonra xml dosyasinda
     </run>
 </groups>
     <packages>
-        <package name="tests.day16_notations"/>
-        <package name="tests.day17_pom"/>
+        <package name="US.day16_notations"/>
+        <package name="US.day17_pom"/>
     </packages>
 </test>
 </suite>

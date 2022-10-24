@@ -11,7 +11,8 @@ import org.testng.asserts.SoftAssert;
 import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ResuableMethods;
+
+
 
 import java.time.Duration;
 import java.util.List;
@@ -24,7 +25,7 @@ public class US012_TC001_TC002_TC003_TC004 {
     SoftAssert softAssert= new SoftAssert();
     SpendingGoodPage sgp=new SpendingGoodPage();
     @Test()
-    public void testCase001()  {
+    public void testCase001() throws InterruptedException {
         // 1. Kullanici https://spendinggood.com/my-account-2/ adresine gider
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         //2.Kullanici Sign In buttonuna tiklayarak sign In sayfasina gorebilmeli
@@ -34,13 +35,13 @@ public class US012_TC001_TC002_TC003_TC004 {
         //4.Kullanici gecerli bir password ile sayfaya giris yapabilmeli
         sgp.password.sendKeys(ConfigReader.getProperty("pass"),Keys.TAB);
         sgp.signIn2.click();
-        ResuableMethods.waitFor(2);
+        Thread.sleep(3000);
         //5. Kullanici sisteme giris yaptiktan  sonra My Account sayfasini gormeli
         sgp.myAccount.click();
         String expectedResult="My Account";
         String actualResult=Driver.getDriver().getTitle();
         softAssert.assertTrue(actualResult.contains(expectedResult));
-        ResuableMethods.waitFor(2);
+        Thread.sleep(2000);
         //6. kullanici Store manager olarak orders(siparisler) button'nunu tiklayabilmeli
        sgp.orderButton.click();
         //7. kullanici acilan sayfada siparisler listesini gorebilmeli
@@ -53,7 +54,7 @@ public class US012_TC001_TC002_TC003_TC004 {
         Driver.closeDriver();
     }
     @Test()
-    public void testCase002()  {
+    public void testCase002() throws InterruptedException {
         // 1. Kullanici https://spendinggood.com/my-account-2/ adresine gider
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         //2.Kullanici Sign In buttonuna tiklayarak sign In sayfasina gorebilmeli
@@ -63,13 +64,13 @@ public class US012_TC001_TC002_TC003_TC004 {
         //4.Kullanici gecerli bir password ile sayfaya giris yapabilmeli
         sgp.password.sendKeys(ConfigReader.getProperty("pass"),Keys.TAB);
         sgp.signIn2.click();
-        ResuableMethods.waitFor(2);
+        Thread.sleep(3000);
         //5. Kullanici sisteme giris yaptiktan  sonra My Account sayfasini gormeli
         sgp.myAccount.click();
         String expectedResult="My Account";
         String actualResult=Driver.getDriver().getTitle();
         softAssert.assertTrue(actualResult.contains(expectedResult));
-        ResuableMethods.waitFor(2);
+        Thread.sleep(2000);
         //6.Kullanici Store Manager olarak Dowlands(Indirilenler) buttonunu tiklayabilmeli
         sgp.dowlands.click();
         //7. Kullanici Store Manager olarak  acilan sayfada eger indirilen ürün listesi varsa görebilmeli
@@ -82,7 +83,7 @@ public class US012_TC001_TC002_TC003_TC004 {
             Driver.closeDriver();
     }
     @Test()
-    public void testCase003()  {
+    public void testCase003() throws InterruptedException {
         // 1. Kullanici https://spendinggood.com/my-account-2/ adresine gider
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         //2.Kullanici Sign In buttonuna tiklayarak sign In sayfasina gorebilmeli
@@ -92,13 +93,13 @@ public class US012_TC001_TC002_TC003_TC004 {
         //4.Kullanici gecerli bir password ile sayfaya giris yapabilmeli
         sgp.password.sendKeys(ConfigReader.getProperty("pass"),Keys.TAB);
         sgp.signIn2.click();
-        ResuableMethods.waitFor(2);
+        Thread.sleep(3000);
         //5. Kullanici sisteme giris yaptiktan  sonra My Account sayfasini gormeli
         sgp.myAccount.click();
         String expectedResult="My Account";
         String actualResult=Driver.getDriver().getTitle();
         softAssert.assertTrue(actualResult.contains(expectedResult));
-        ResuableMethods.waitFor(2);
+        Thread.sleep(2000);
         // 6. kullanici acilan sayfada daha önce girilen fatura adresi ve gönderim adresini görebilmeli
         sgp.adresses.click();
         //7.Kullanici Fatura adres bilgisi ve gönderim adres bilgilerini listeleyebilmeli
@@ -112,7 +113,7 @@ public class US012_TC001_TC002_TC003_TC004 {
 
 
     }@Test()
-    public void testCase004()  {
+    public void testCase004() throws InterruptedException {
         // 1. Kullanici https://spendinggood.com/my-account-2/ adresine gider
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         //2.Kullanici Sign In buttonuna tiklayarak sign In sayfasina gorebilmeli
@@ -122,13 +123,13 @@ public class US012_TC001_TC002_TC003_TC004 {
         //4.Kullanici gecerli bir password ile sayfaya giris yapabilmeli
         sgp.password.sendKeys(ConfigReader.getProperty("pass"),Keys.TAB);
         sgp.signIn2.click();
-        ResuableMethods.waitFor(2);
+        Thread.sleep(3000);
         //5. Kullanici sisteme giris yaptiktan  sonra My Account sayfasini gormeli
         sgp.myAccount.click();
         String expectedResult="My Account";
         String actualResult=Driver.getDriver().getTitle();
         softAssert.assertTrue(actualResult.contains(expectedResult));
-        ResuableMethods.waitFor(2);
+       Thread.sleep(2000);
         //6. Acilan sayfada kullanici hesap bilgisi ve eposta adres bilgisini gorebilmeli
         sgp.accountDetailsButton.click();
         //7.  Kullanici Adressleri ve eposta adresini göncelleyebilmeli

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ResuableMethods {
+public class ReusableMethods {
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -85,6 +85,7 @@ public class ResuableMethods {
             e.printStackTrace();
         }
     }
+
     //===============Explicit Wait==============//
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
@@ -123,15 +124,28 @@ public class ResuableMethods {
     }
 
     //======Fluent Wait====//
-   //public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
-   //    FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
-   //            .withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS)
-   //            .ignoring(NoSuchElementException.class);
-   //    WebElement element = wait.until(new Function<WebDriver, WebElement>() {
-   //        public WebElement apply(WebDriver driver) {
-   //            return webElement;
-   //        }
-   //    });
-      //  return element;
+    //public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
+    //    FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
+    //            .withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS)
+    //            .ignoring(NoSuchElementException.class);
+    //    WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+    //        public WebElement apply(WebDriver driver) {
+    //            return webElement;
+    //        }
+    //    });
+    //  return element;
+
+
+    //====== JS Scroll Click ====//
+    public static void jsScrollClick(WebElement webElement) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        try {
+            webElement.click();
+        } catch (Exception e) {
+            js.executeScript("arguments[0].scrollIntoView(true);", webElement);
+            js.executeScript("arguments[0].click()", webElement);
+            waitFor(1);
+        }
     }
 
+}

@@ -3,7 +3,7 @@
     <test name="Cross browser chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="tests.day22_cross_Browser.C01_AssertionsCross"/>
+            <class name="US.day22_cross_Browser.C01_AssertionsCross"/>
 
         </classes>
     </test>
@@ -11,7 +11,7 @@
         <parameter name="browser" value="firefox"/>
         <classes>
 
-            <class name="tests.day22_cross_Browser.C02_SoftAssortCross"/>
+            <class name="US.day22_cross_Browser.C02_SoftAssortCross"/>
         </classes>
     </test>
 </suite>
