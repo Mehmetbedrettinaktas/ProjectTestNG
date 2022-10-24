@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ce773b-4236-4f1b-9de5-ec98f73affa9" name="Changes" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/US001_NegatifTestler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/US001_NegatifTestler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestBaseRapor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestBaseRapor.java" afterDir="false" />
+=======
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/tests/US012_TC001_TC002_TC003_TC004.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
@@ -12,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/SpendingGoodPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SpendingGoodPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/US010_TC001_TC002_TC003.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/US010_TC001_TC002_TC003.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/US011_TC001_TC002_TC003.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/US011_TC001_TC002_TC003.java" afterDir="false" />
+>>>>>>> main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +78,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+<<<<<<< HEAD
+      <option name="PACKAGE_NAME" value="US" />
+      <option name="MAIN_CLASS_NAME" value="tests.US001_NegatifTestler" />
+=======
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.US_013_TC_deneme" />
+>>>>>>> main
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -88,6 +100,11 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+<<<<<<< HEAD
+      <option name="PACKAGE_NAME" value="US" />
+      <option name="MAIN_CLASS_NAME" value="tests.US001_NegatifTestler" />
+      <option name="METHOD_NAME" value="gecersizEmail" />
+=======
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.US_14_TC_deneme" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -142,6 +159,7 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.US_15_TC_deneme" />
       <option name="METHOD_NAME" value="testTC_01" />
+>>>>>>> main
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -149,6 +167,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+    <configuration name="US_005" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.TsetNG_Bulutluoz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="US" />
+      <option name="MAIN_CLASS_NAME" value="tests.US_005" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="US_006" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.TsetNG_Bulutluoz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="US" />
+      <option name="MAIN_CLASS_NAME" value="tests.US_006" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="US_007" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.TsetNG_Bulutluoz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="US" />
+      <option name="MAIN_CLASS_NAME" value="tests.US_007" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+=======
+>>>>>>> main
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.US_14_TC_deneme" />
