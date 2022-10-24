@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ce773b-4236-4f1b-9de5-ec98f73affa9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/US001_NegatifTestler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/US001_NegatifTestler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestBaseRapor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestBaseRapor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,12 +62,12 @@
       <module name="com.TsetNG_Bulutluoz" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="US.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="US" />
-      <option name="MAIN_CLASS_NAME" value="US.US001_NegatifTestler" />
+      <option name="MAIN_CLASS_NAME" value="tests.US001_NegatifTestler" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -77,12 +79,12 @@
       <module name="com.TsetNG_Bulutluoz" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="US.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="US" />
-      <option name="MAIN_CLASS_NAME" value="US.US001_NegatifTestler" />
+      <option name="MAIN_CLASS_NAME" value="tests.US001_NegatifTestler" />
       <option name="METHOD_NAME" value="gecersizEmail" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -95,12 +97,12 @@
       <module name="com.TsetNG_Bulutluoz" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="US.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="US" />
-      <option name="MAIN_CLASS_NAME" value="US.US_005" />
+      <option name="MAIN_CLASS_NAME" value="tests.US_005" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -112,12 +114,12 @@
       <module name="com.TsetNG_Bulutluoz" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="US.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="US" />
-      <option name="MAIN_CLASS_NAME" value="US.US_006" />
+      <option name="MAIN_CLASS_NAME" value="tests.US_006" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -129,12 +131,12 @@
       <module name="com.TsetNG_Bulutluoz" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="US.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="US" />
-      <option name="MAIN_CLASS_NAME" value="US.US_007" />
+      <option name="MAIN_CLASS_NAME" value="tests.US_007" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
