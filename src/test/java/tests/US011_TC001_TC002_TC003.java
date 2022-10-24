@@ -12,7 +12,8 @@ import org.testng.asserts.SoftAssert;
 import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ResuableMethods;
+import utilities.ReusableMethods;
+
 
 import java.time.Duration;
 
@@ -83,7 +84,7 @@ public class US011_TC001_TC002_TC003 {
         String expectedResult="My Account";
         String actualResult=Driver.getDriver().getTitle();
         softAssert.assertTrue(actualResult.contains(expectedResult));
-       ResuableMethods.waitFor(2);
+        ReusableMethods.waitFor(2);
         //6. Kullanici Store Manger sekmesini tiklayabilmeli
         sgp.storeManager.click();
         //7.Kullanici Store Manager sayfasini gormeli
@@ -102,6 +103,7 @@ public class US011_TC001_TC002_TC003 {
         jse.executeScript("arguments[0].click()", tUgAyarlari);
         //10. Kullanici acilan sayfada Units per Piece kismini gorebilmeli
        sgp.unitsPerPieceYaziElementi.isDisplayed();
+
         softAssert.assertAll();
         Driver.closeDriver();
     }
