@@ -11,8 +11,7 @@ import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_014_TC001_TC008 {
-
+public class US_14_TC_deneme {
 
     SpendingGoodPage spendinGoodPage = new SpendingGoodPage();
     Actions actions = new Actions(Driver.getDriver());
@@ -37,8 +36,11 @@ public class US_014_TC001_TC008 {
         //6.Store Manager butonuna tiklar
         spendinGoodPage.storeManager.click();
         //7.Store manager sayfasinda Coupons‘ u tiklar
-        actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.coupons.click();
+        //actions.sendKeys(Keys.PAGE_UP).perform();
+        //spendinGoodPage.coupons.click();
+        WebElement kupon = spendinGoodPage.coupons;
+        jse.executeScript("arguments[0].scrollIntoView(true);", kupon);
+        jse.executeScript("arguments[0].click();", kupon);
 
     }
 
@@ -59,7 +61,7 @@ public class US_014_TC001_TC008 {
         //6.Coupon Successfully Saved yazisinin gorundugunu dogrular
         String expectedSubmitSonucYazisi = "Coupon Successfully Published.";
         Assert.assertEquals(spendinGoodPage.couponSuccesfullyPublished.getText(), expectedSubmitSonucYazisi);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         System.out.println(spendinGoodPage.minimumSpend.getAttribute("value"));
         //7.sayfada minimum degerin girilen minimum deger oldugunu dogrular
         Assert.assertEquals(spendinGoodPage.minimumSpend.getAttribute("value"), "50");
@@ -87,7 +89,7 @@ public class US_014_TC001_TC008 {
         //6.Coupon Successfully Saved yazisinin gorundugunu dogrular
         String expectedSubmitSonucYazisi = "Coupon Successfully Published.";
         Assert.assertEquals(spendinGoodPage.couponSuccesfullyPublished.getText(), expectedSubmitSonucYazisi);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         //7.sayfada minimum degerin girilen minimum deger oldugunu dogrular
         Assert.assertEquals(spendinGoodPage.minimumSpend.getAttribute("value"), "500");
         //8.sayfada miaximum degerin girilen maximum deger oldugunu dogrular
@@ -113,9 +115,16 @@ public class US_014_TC001_TC008 {
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC14004");
         //3.Individual use only seceneginni tiklar
-        spendinGoodPage.individualUse.click();
+        WebElement individual = spendinGoodPage.individualUse;
+        jse.executeScript("arguments[0].scrollIntoView(true);", individual);
+        jse.executeScript("arguments[0].click();", individual);
+        //actions.sendKeys(Keys.PAGE_DOWN).perform();
+        // spendinGoodPage.individualUse.click();
         //4.Exclude sale items secenegini tiklar
-        spendinGoodPage.excludeSale.click();
+        WebElement exclude = spendinGoodPage.excludeSale;
+        jse.executeScript("arguments[0].scrollIntoView(true);", exclude);
+        jse.executeScript("arguments[0].click();", exclude);
+        //spendinGoodPage.excludeSale.click();
         //5.submit butonuna tiklar
         WebElement submit = spendinGoodPage.submitButton;
         jse.executeScript("arguments[0].scrollIntoView(true);", submit);
@@ -123,7 +132,7 @@ public class US_014_TC001_TC008 {
         //6.Coupon Successfully Saved yazisinin gorundugunu dogrular
         String expectedSubmitSonucYazisi = "Coupon Successfully Published.";
         Assert.assertEquals(spendinGoodPage.couponSuccesfullyPublished.getText(), expectedSubmitSonucYazisi);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         //7.individual Use only kutusunun secili oldugunu dogrular
         Assert.assertTrue(spendinGoodPage.individualUse.isSelected());
         //8.Exclude sale items kutusunun secili oldugunu dogrular
@@ -134,20 +143,21 @@ public class US_014_TC001_TC008 {
     @Test(priority = 5)
     public void testTC_05() throws InterruptedException {
         //1.Coupons sayfasinda Add New'i tiklar
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         actions.sendKeys(Keys.PAGE_UP).perform();
         spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC14005");
         //3.Products kutusuna istenen ürünler yazilir
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         String urunler = "T-Shirt";
-        spendinGoodPage.products.sendKeys(urunler);
-        Thread.sleep(3000);
+        spendinGoodPage.product.sendKeys(urunler);
+        Thread.sleep(2000);
         spendinGoodPage.urun.click();
         //4.Exclude products kutusuna exclude edilecek urunler yazilir
         String excludeUrunler = "Arcelik";
         spendinGoodPage.excludeProducts.sendKeys(excludeUrunler);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         spendinGoodPage.urun.click();
         //5.submit butonuna tiklar
         WebElement submit = spendinGoodPage.submitButton;
@@ -157,15 +167,24 @@ public class US_014_TC001_TC008 {
         String expectedSubmitSonucYazisi = "Coupon Successfully Published.";
         Thread.sleep(1000);
         Assert.assertEquals(spendinGoodPage.couponSuccesfullyPublished.getText(), expectedSubmitSonucYazisi);
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         //7.Products kutusunda girilen urunlerin goruldugunu test eder
-        spendinGoodPage.products.click();
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        Thread.sleep(2000);
+        WebElement product = spendinGoodPage.product;
+        jse.executeScript("arguments[0].scrollIntoView(true);", product);
+        jse.executeScript("arguments[0].click();", product);
+        //spendinGoodPage.product.click();
         String girilenUrun = spendinGoodPage.choiceProductsKAt.getText().substring(1);
         Assert.assertEquals(girilenUrun, urunler);
         //8.Products exclude kutusunda girilen urunlerin goruldugunu test eder
+        Thread.sleep(2000);
+        WebElement excProduct = spendinGoodPage.excludeProducts;
+        jse.executeScript("arguments[0].scrollIntoView(true);", excProduct);
+        jse.executeScript("arguments[0].click();", excProduct);
         spendinGoodPage.excludeProducts.click();
         Assert.assertEquals(spendinGoodPage.choiceProductsExcKat.getText().substring(1), excludeUrunler);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
     }
 
@@ -173,20 +192,22 @@ public class US_014_TC001_TC008 {
     public void testTC_06() throws InterruptedException {
 
         //1.Coupons sayfasinda Add New'i tiklar
+        Thread.sleep(1000);
         actions.sendKeys(Keys.PAGE_UP).perform();
+        Thread.sleep(1000);
         spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC14006");
         //3.Products kutusuna istenen ürünler yazilir
         String urunler = "Arcelik";
-        spendinGoodPage.products.sendKeys(urunler);
-        Thread.sleep(3000);
+        spendinGoodPage.product.sendKeys(urunler);
+        Thread.sleep(2000);
         spendinGoodPage.urun.click();
         //4.Exclude products kutusuna ayni istenen urunler yazilir
         spendinGoodPage.excludeProducts.sendKeys(urunler);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         spendinGoodPage.urun.click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         //5.submit butonuna tiklar
         WebElement submit = spendinGoodPage.submitButton;
         jse.executeScript("arguments[0].scrollIntoView(true);", submit);
@@ -194,9 +215,9 @@ public class US_014_TC001_TC008 {
         //6.Coupon Successfully Saved yazisinin gorundugunu dogrular
         String expectedSubmitSonucYazisi = "Coupon Successfully Published.";
         Assert.assertEquals(spendinGoodPage.couponSuccesfullyPublished.getText(), expectedSubmitSonucYazisi);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         //7.Products kutusundaki üurunlerin girilen urunler ile exclude kutusundaki urunlerin ayni oldugunu  test eder
-        spendinGoodPage.products.click();
+        //spendinGoodPage.products.click();
         Assert.assertEquals(spendinGoodPage.choiceProductsKAt.getText(), spendinGoodPage.choiceProductsExcKat.getText());
 
     }
@@ -209,13 +230,15 @@ public class US_014_TC001_TC008 {
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC14007");
         //3.Products kategori kutusuna istenen ürünler yazilir
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         String urunKategori = "Clothes";
         spendinGoodPage.productCategories.sendKeys(urunKategori);
+        Thread.sleep(1000);
         spendinGoodPage.urun.click();
         //4.Exclude products kategori kutusuna exclude edilecek urunler yazilir
         String excludeKategori = "Electronics";
         spendinGoodPage.excludeCategories.sendKeys(excludeKategori);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         spendinGoodPage.urun.click();
         //5.submit butonuna tiklar
         WebElement submit = spendinGoodPage.submitButton;
@@ -224,7 +247,7 @@ public class US_014_TC001_TC008 {
         //6.Coupon Successfully Saved yazisinin gorundugunu dogrular
         String expectedSubmitSonucYazisi = "Coupon Successfully Published.";
         Assert.assertEquals(spendinGoodPage.couponSuccesfullyPublished.getText(), expectedSubmitSonucYazisi);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         spendinGoodPage.productCategories.click();
         //7.Products kategorisi kutusunda girilen urunlerin goruldugunu test eder
@@ -238,18 +261,20 @@ public class US_014_TC001_TC008 {
     @Test(priority = 8)
     public void testTC_08() throws InterruptedException {
         //1.Coupons sayfasinda Add New'i tiklar
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         actions.sendKeys(Keys.PAGE_UP).perform();
+        Thread.sleep(1000);
         spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC14008");
         //3.Products kategori kutusuna istenen kategoriler yazilir
         String urunKategori = "Clothes";
         spendinGoodPage.productCategories.sendKeys(urunKategori);
+        Thread.sleep(2000);
         spendinGoodPage.urun.click();
         //4.Exclude products kategori kutusuna products ile ayni kategoriler yazilir
         spendinGoodPage.excludeCategories.sendKeys(urunKategori);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         spendinGoodPage.urun.click();
         //5.submit butonuna tiklar
         WebElement submit = spendinGoodPage.submitButton;
@@ -258,20 +283,21 @@ public class US_014_TC001_TC008 {
         //6.Coupon Successfully Saved yazisinin gorundugunu dogrular
         String expectedSubmitSonucYazisi = "Coupon Successfully Published.";
         Assert.assertEquals(spendinGoodPage.couponSuccesfullyPublished.getText(), expectedSubmitSonucYazisi);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         spendinGoodPage.productCategories.click();
         //7.Products ve Exclude Products kategori kutularindaki secili kategorilerin ayni goruldugunu test eder
         Assert.assertEquals(spendinGoodPage.choiceProductsKAt.getText().substring(1), spendinGoodPage.choiceProductsExcKat.getText().substring(1));
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
     }
 
     @Test(priority = 9)
     public void testTC_09() throws InterruptedException {
         //1.Coupons sayfasinda Add New'i tiklar
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         actions.sendKeys(Keys.PAGE_UP).perform();
+        Thread.sleep(1000);
         spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC14009");
@@ -285,19 +311,18 @@ public class US_014_TC001_TC008 {
         //5.Coupon Successfully Saved yazisinin gorundugunu dogrular
         String expectedSubmitSonucYazisi = "Coupon Successfully Published.";
         Assert.assertEquals(spendinGoodPage.couponSuccesfullyPublished.getText(), expectedSubmitSonucYazisi);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         //6.Email Restrictions kutusundaki maillerin girilen mailler oldugunu test eder
         Assert.assertEquals(spendinGoodPage.emailRestriction.getAttribute("value"), mailler);
 
-        spendinGoodPage.coupons.click();
+          actions.sendKeys(Keys.PAGE_UP).perform();
+          spendinGoodPage.coupons.click();
 
-        for (int i = 0; i < 10; i++) {
-            Driver.getDriver().findElement(By.xpath("(//*[@class='wcfm_coupon_delete wcfm-action-icon'])[1]")).click();
-            Driver.getDriver().switchTo().alert().accept();
-            Thread.sleep(3000);
-        }
+         for (int i = 0; i <8 ; i++) {
+             Driver.getDriver().findElement(By.xpath("(//*[@class='wcfm_coupon_delete wcfm-action-icon'])[1]")).click();
+             Driver.getDriver().switchTo().alert().accept();
+             Thread.sleep(3000);
+         }
         Driver.closeDriver();
     }
 }
-
-

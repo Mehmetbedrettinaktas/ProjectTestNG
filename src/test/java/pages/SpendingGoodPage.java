@@ -635,8 +635,8 @@ public class SpendingGoodPage {
         public WebElement individualUse;
         @FindBy(xpath = "//*[@id='exclude_sale_items']")
         public WebElement excludeSale;
-     //   @FindBy(xpath = "(//*[@class='select2-search__field'])[1]")
-     //   public WebElement products;
+        @FindBy(xpath = "(//*[@class='select2-search__field'])[1]")
+        public WebElement product;
         @FindBy(xpath = "(//*[@class='select2-search__field'])[2]")
         public WebElement excludeProducts;
         @FindBy(xpath = "(//*[@class='select2-search__field'])[3]")
@@ -659,7 +659,10 @@ public class SpendingGoodPage {
         public WebElement choiceProductsKAt;
         @FindBy(xpath = "(//*[@class='select2-selection__choice'])[2]")
         public WebElement choiceProductsExcKat;
-
+        @FindBy(xpath = "(//*[@class='wcfm_coupon_delete wcfm-action-icon'])[1]")
+        public WebElement delete;
+        @FindBy(xpath = "(//*[@class='coupon-types coupon-types-percent'])[1]")
+        public WebElement discountTyp;
 
 
 
