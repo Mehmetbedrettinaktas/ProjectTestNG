@@ -776,26 +776,86 @@ public class SpendingGoodPage {
 
 
         // ************ Abdurrahim Bey ***************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        @FindBy(xpath = "//*[text()='Sign In ']")
+        public WebElement signIn1;
+        @FindBy(xpath = "//span[contains(text(),'Refund')]")
+        public WebElement refund;
+        @FindBy(id = "wcfm-refund-requests_next")
+        public WebElement nextButton;
+        @FindBy(xpath = "//tbody//tr//td[2]")
+        public List<WebElement> requestIDlist;
+        @FindBy(xpath = "//tbody//tr//td[3]")
+        public List<WebElement> orderIDlist;
+        @FindBy(xpath = "//tbody//tr//td[4]")
+        public List<WebElement> amountList;
+        @FindBy(xpath = "//tbody//tr//td[5]")
+        public List<WebElement> typeIDlist;
+        @FindBy(xpath = "//tbody//tr//td[6]")
+        public List<WebElement> reasonList;
+        @FindBy (xpath = "(//input[@class='form-control'])[1]")
+        public WebElement search;
+        @FindBy (xpath = "//*[@id=\"main\"]/div/div/div/div[4]/ul/li[1]/div/div/h3/a")
+        public WebElement tShirt;
+        @FindBy (xpath = "//*[@title='Plus']")
+        public WebElement plus;
+        @FindBy (xpath = "//button[@name='add-to-cart']")
+        public WebElement addToCart;
+        @FindBy (xpath = "(//i[@class='w-icon-cart'])[1]")
+        public WebElement cart;
+        @FindBy (xpath = "//*[.='Checkout']")
+        public WebElement checkout;
+        @FindBy (xpath = "//input[@name='billing_first_name']")
+        public WebElement firstName;
+        @FindBy (xpath = "//button[@id='place_order']")
+        public WebElement placeOrder;
+        @FindBy(xpath = "//li[@class='wc_payment_method payment_method_cod']")
+        public WebElement payAtTheDoor;
+        @FindBy(xpath = "//input[@name='billing_last_name']")
+        public WebElement lastName;
+        @FindBy(xpath = "//input[@name='billing_company']")
+        public WebElement companyName;
+        @FindBy(xpath = "//select[@id='billing_country']")
+        public WebElement country;
+        @FindBy(xpath = "//input[@id='billing_address_1']")
+        public WebElement streetAddress;
+        @FindBy(xpath = "//input[@id='billing_address_2']")
+        public WebElement streetAddress_2;
+        @FindBy(xpath = "//input[@id='billing_postcode']")
+        public WebElement postcode;
+        @FindBy(xpath = "//input[@id='billing_city']")
+        public WebElement town;
+        @FindBy(xpath = "//select[@id='billing_state']")
+        public WebElement state;
+        @FindBy(xpath = "//input[@id='billing_phone']")
+        public WebElement phone;
+        @FindBy(xpath = "//input[@id='billing_email']")
+        public WebElement emailCheckout;
+        @FindBy (xpath= "//*[text()='Thank you. Your order has been received.']")
+        public WebElement thankYou;
+        @FindBy(xpath = "//a[@class='login logout inline-type']")
+        public WebElement signOut;
+        @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/nav/ul/li[10]/a")
+        public WebElement logOut2;
+        @FindBy (xpath= "(//*[contains(text(),'Orders')])[1]")
+        public WebElement ordersStoreManager;
+        @FindBy (xpath= "(//span[@data-tip='Mark as Complete'])[1]")
+        public WebElement markAsComplete;
+        @FindBy (xpath= "(//*[@data-tip='View Details'])[1]")
+        public WebElement viewDetails;
+        @FindBy (xpath= "(//*[@data-tip='Refund Request'])[1]")
+        public WebElement refundRequest;
+        @FindBy (xpath= "//select[@id='wcfm_refund_request']")
+        public WebElement requestMode;
+        @FindBy (xpath = "//*[@name='wcfm_refund_reason']")
+        public WebElement refundRequestsReason;
+        @FindBy (xpath = "//input[@name='submit']")
+        public WebElement submitRefund;
+        @FindBy (xpath = "//*[@class='wcfm-message wcfm-success']")
+        public WebElement refundSucces;
+        @FindBy(xpath = "//span[contains(text(),'Followers')]")
+        public WebElement followers;
+        @FindBy (xpath = "//*[@class='dataTables_empty']")
+        public WebElement nameEmailActions;
 
 
 
