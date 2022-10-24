@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ce773b-4236-4f1b-9de5-ec98f73affa9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/US16_17.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SpendingGoodPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SpendingGoodPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,35 +39,31 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Projects/ProjectTestNG&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projects\ProjectTestNG" />
       <recent name="C:\Projects\ProjectTestNG\src" />
       <recent name="C:\Projects\ProjectTestNG\src\test\java\utilities" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tests" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.US_007">
-    <configuration name="US001_NegatifTestler" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com.TsetNG_Bulutluoz" />
+  <component name="RunManager" selected="TestNG.US16_17.test_US_16">
+    <configuration name="US16_17" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProjeTestNG" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="US.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="US" />
-      <option name="MAIN_CLASS_NAME" value="US.US001_NegatifTestler" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.US16_17" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -73,17 +71,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US001_NegatifTestler.gecersizEmail" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com.TsetNG_Bulutluoz" />
+    <configuration name="US16_17.test_US_16" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProjeTestNG" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="US.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="US" />
-      <option name="MAIN_CLASS_NAME" value="US.US001_NegatifTestler" />
-      <option name="METHOD_NAME" value="gecersizEmail" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.US16_17" />
+      <option name="METHOD_NAME" value="test_US_16" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -144,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.US16_17.test_US_16" />
+        <item itemvalue="TestNG.US16_17" />
         <item itemvalue="TestNG.US_007" />
         <item itemvalue="TestNG.US_006" />
         <item itemvalue="TestNG.US_005" />
-        <item itemvalue="TestNG.US001_NegatifTestler" />
-        <item itemvalue="TestNG.US001_NegatifTestler.gecersizEmail" />
       </list>
     </recent_temporary>
   </component>
