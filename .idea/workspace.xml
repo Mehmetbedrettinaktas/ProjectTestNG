@@ -5,8 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ce773b-4236-4f1b-9de5-ec98f73affa9" name="Changes" comment="">
+<<<<<<< HEAD
+=======
+      <change afterPath="$PROJECT_DIR$/src/test/java/US/US_005.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/US/US_006.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/US/US_007.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/US/US001_NegatifTestler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/US/US001_US002.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/US/US010_TC001_TC002_TC003.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/US/US011_TC001_TC002_TC003.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/US/US_005.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/US/US_006.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/US/US_007.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/US/VerificationCodeMethodFatma.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/SpendingGoodPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ConfigReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/CrossDriver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ReusableMethods$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ReusableMethods.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/TestBaseCross.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/TestBaseRapor.class" afterDir="false" />
+>>>>>>> main
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/SpendingGoodPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SpendingGoodPage.java" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/ReusableMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/ReusableMethods.java" afterDir="false" />
+>>>>>>> main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
