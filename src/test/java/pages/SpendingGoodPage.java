@@ -585,80 +585,80 @@ public class SpendingGoodPage {
 
 
         // ******************** Mustafa Bek Bey ***************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //   @FindBy(xpath = "//span[text()='Sign In ']")
+    //   public WebElement signIn;
+        @FindBy(xpath = "(//*[@class='woocommerce-Input woocommerce-Input--text input-text'])[1]")
+        public WebElement eMailButton;
+      //  @FindBy(xpath = "(//*[@class='woocommerce-Input woocommerce-Input--text input-text'])[2]")
+      //  public WebElement password;
+        @FindBy(xpath = "//*[@name='login']")
+        public WebElement signInButton;
+    //  @FindBy(xpath = "(//*[text()='My Account'])[1]")
+    //  public WebElement myAccount;
+    //  @FindBy(xpath = "//*[text()='Store Manager']")
+    //  public WebElement storeManager;
+        @FindBy(xpath = "(//*[@class='text'])[6]")
+        public WebElement coupons;
+        @FindBy(xpath = "(//*[text()='Add New'])[1]")
+        public WebElement addNeww;
+        @FindBy(xpath = "//*[@id='title']")
+        public WebElement codeBox;
+        @FindBy(xpath = "//*[@id='description']")
+        public WebElement descriptionBox;
+        @FindBy(xpath = "//*[@id='discount_type']")
+        public WebElement percentageDiscount;
+        @FindBy(xpath = "//*[@id='discount_type']")
+        public WebElement fixedProductDiscount;
+        @FindBy(xpath = "//*[@id='coupon_amount']")
+        public WebElement discountAmaunt;
+        @FindBy(xpath = "//*[@id='expiry_date']")
+        public WebElement expiryDateBox;
+        @FindBy(xpath = "//*[@id='free_shipping']")
+        public WebElement freeShippingBox;
+        @FindBy(xpath = "//*[@id='show_on_store']")
+        public WebElement showOnStoreBox;
+     //  @FindBy(xpath = "(//*[@class='wcfm_submit_button'])[1]")
+     //  public WebElement submitButton;
+        @FindBy(xpath = "//*[@name='draft-data']")
+        public WebElement draftButton;
+        @FindBy(xpath = "//*[@class='wcfm-message wcfm-success']")
+        public WebElement couponSuccesfullySaved;
+        @FindBy(xpath = "//*[@class='wcfm-message wcfm-success']")
+        public WebElement couponSuccesfullyPublished;
+        @FindBy(xpath = "//*[@id='wcfm_coupon_manager_submit']")
+        public WebElement pleaseInsertYazisi;
+        @FindBy(xpath = "(//*[@type='text'])[3]")
+        public WebElement minimumSpend;
+        @FindBy(xpath = "(//*[@class='wcfm-text wcfm_ele wcfm_non_negative_input'])[2]")
+        public WebElement maximumSpend;
+        @FindBy(xpath = "//*[@id='individual_use']")
+        public WebElement individualUse;
+        @FindBy(xpath = "//*[@id='exclude_sale_items']")
+        public WebElement excludeSale;
+     //   @FindBy(xpath = "(//*[@class='select2-search__field'])[1]")
+     //   public WebElement products;
+        @FindBy(xpath = "(//*[@class='select2-search__field'])[2]")
+        public WebElement excludeProducts;
+        @FindBy(xpath = "(//*[@class='select2-search__field'])[3]")
+        public WebElement productCategories;
+        @FindBy(xpath = "(//*[@class='select2-search__field'])[4]")
+        public WebElement excludeCategories;
+        @FindBy(xpath = "//*[@id='customer_email']")
+        public WebElement emailRestriction;
+        @FindBy(xpath = "//*[@class='page_collapsible collapse-close']")
+        public WebElement limitButton;
+        @FindBy(xpath = "(//*[@class='wcfm-text wcfm-text-limit wcfm_non_negative_input wcfm_ele'])[1]")
+        public WebElement limitPerCoupon;
+        @FindBy(xpath = "(//*[@class='wcfm-text wcfm-text-limit wcfm_non_negative_input wcfm_ele'])[2]")
+        public WebElement limitUsageXitems;
+        @FindBy(xpath = "(//*[@class='wcfm-text wcfm-text-limit wcfm_non_negative_input wcfm_ele'])[3]")
+        public WebElement limitperUser;
+        @FindBy(xpath = "//*[@class='select2-results__option select2-results__option--highlighted']")
+        public WebElement urun;
+        @FindBy(xpath = "(//*[@class='select2-selection__choice'])[1]")
+        public WebElement choiceProductsKAt;
+        @FindBy(xpath = "(//*[@class='select2-selection__choice'])[2]")
+        public WebElement choiceProductsExcKat;
 
 
 
