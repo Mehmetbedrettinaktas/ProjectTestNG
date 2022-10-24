@@ -85,6 +85,7 @@ public class ReusableMethods {
             e.printStackTrace();
         }
     }
+
     //===============Explicit Wait==============//
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
@@ -123,15 +124,28 @@ public class ReusableMethods {
     }
 
     //======Fluent Wait====//
-   //public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
-   //    FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
-   //            .withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS)
-   //            .ignoring(NoSuchElementException.class);
-   //    WebElement element = wait.until(new Function<WebDriver, WebElement>() {
-   //        public WebElement apply(WebDriver driver) {
-   //            return webElement;
-   //        }
-   //    });
-      //  return element;
+    //public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
+    //    FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
+    //            .withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS)
+    //            .ignoring(NoSuchElementException.class);
+    //    WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+    //        public WebElement apply(WebDriver driver) {
+    //            return webElement;
+    //        }
+    //    });
+    //  return element;
+
+
+    //====== JS Scroll Click ====//
+    public static void jsScrollClick(WebElement webElement) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        try {
+            webElement.click();
+        } catch (Exception e) {
+            js.executeScript("arguments[0].scrollIntoView(true);", webElement);
+            js.executeScript("arguments[0].click()", webElement);
+            waitFor(1);
+        }
     }
 
+}

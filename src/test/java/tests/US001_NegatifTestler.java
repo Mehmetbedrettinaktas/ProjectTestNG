@@ -1,7 +1,6 @@
-package US;
+package tests;
 
 import com.github.javafaker.Faker;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
