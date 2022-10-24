@@ -19,10 +19,11 @@ import java.time.Duration;
 public class US001_NegatifTestler extends TestBaseRapor {
 
 
-    SpendingGoodPage spendingGoodPage = new SpendingGoodPage();
+
 
     @Test (priority = 1)
     public void bosEmail() throws InterruptedException {
+        SpendingGoodPage spendingGoodPage = new SpendingGoodPage();
         extentTest=extentReports.createTest("BosEmail","Kullanici Hesap Acma islemlerini yaparken Email kutusunu bos birakmamali");
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         extentTest.info("Spendinggood anasayfaya gidildi");
@@ -46,18 +47,19 @@ public class US001_NegatifTestler extends TestBaseRapor {
         ReusableMethods.waitFor(4);
         extentTest.pass("Email kutusu bos birakildiginda ekranda hata mesaji ciktigi goruntulendi");
         extentTest.pass("Email yazilmadigindan dolayi register yapilamadi");
-        Driver.getDriver().navigate().refresh();
+        Driver.closeDriver();
 
     }
 
     @Test (priority = 2)
     public void gecersizEmail() throws InterruptedException {
+        SpendingGoodPage spendingGoodPage = new SpendingGoodPage();
         extentTest=extentReports.createTest("GecersizEmail","Kullanici Hesap Acma islemlerini yaparken gecerli bir Email girmeli");
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         extentTest.info("Spendinggood anasayfaya gidildi");
 
-       SpendingGoodPage.register.click();
-       extentTest.info("Register butonuna tiklandi");
+        SpendingGoodPage.register.click();
+        extentTest.info("Register butonuna tiklandi");
         ReusableMethods.waitFor(3);
         SpendingGoodPage.BecomeVendor.click();
         extentTest.info("Become a Vendor butonuna tiklandi");
@@ -78,7 +80,7 @@ public class US001_NegatifTestler extends TestBaseRapor {
         extentTest.pass("Gecersiz Email girildiginde ekranda hata mesaji ciktigi goruntulendi");
         extentTest.pass("Gecersiz email girildiginden dolayi Register olunamadi");
 
-        Driver.getDriver().navigate().refresh();
+        Driver.closeDriver();
 
     }
 
@@ -86,11 +88,12 @@ public class US001_NegatifTestler extends TestBaseRapor {
 
     @Test (priority = 3)
     public void GecersizPassword() throws InterruptedException {
+        SpendingGoodPage spendingGoodPage = new SpendingGoodPage();
         extentTest=extentReports.createTest("GecersizPassword","Kullanici Gulch Password girmeden Vendor hesabi olusturamamali");
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         extentTest.info("Spendinggood anasayfaya gidildi");
 
-       SpendingGoodPage.register.click();
+        SpendingGoodPage.register.click();
         Thread.sleep(3000);
         extentTest.info("Register butonuna tiklandi");
 
@@ -116,7 +119,7 @@ public class US001_NegatifTestler extends TestBaseRapor {
 
         extentTest.pass("Kullanici Gulch Password girmedigi icin register yapilamadi");
 
-        //  Driver.closeDriver();
+        Driver.closeDriver();
 
     }
 
