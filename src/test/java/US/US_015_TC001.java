@@ -31,22 +31,14 @@ public class US_015_TC001 {
         spendinGoodPage.signInButton.click();
         //5.My Account butonuna tiklar
         Thread.sleep(3000);
-       // ReusableMethods.waitForVisibility(spendinGoodPage.signInButton,5);
         spendinGoodPage.myAccount.click();
         //6.Store Manager butonuna tiklar
         spendinGoodPage.storeManager.click();
         //7.Store manager sayfasinda Coupons‘ u tiklar
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(3000);
+        actions.sendKeys(Keys.PAGE_UP).perform();
         spendinGoodPage.coupons.click();
-        ReusableMethods.waitFor(3);
         //8.Coupons sayfasinda Add New'i tiklar
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        spendinGoodPage.addNew.click();
-        WebElement addNewButton = spendinGoodPage.addNew;
-        jse.executeScript("arguments[0].scrollIntoView(true);", addNewButton);
-        jse.executeScript("arguments[0].click();", addNewButton);
-
+        spendinGoodPage.addNeww.click();
         //9.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC150001");
         //10.Limit butonuna tiklar
@@ -64,7 +56,7 @@ public class US_015_TC001 {
         //15.Coupon Successfully Saved yazisinin gorundugunu dogrular
         String expectedSubmitSonucYazisi = "Coupon Successfully Published.";
         Assert.assertEquals(spendinGoodPage.couponSuccesfullyPublished.getText(), expectedSubmitSonucYazisi);
-        ReusableMethods.waitForVisibility(spendinGoodPage.couponSuccesfullyPublished,3);
+        Thread.sleep(3000);
         //16.limit butonunu tiklar
         spendinGoodPage.limitButton.click();
         //17.Usage limit per coupon kutusundaki girilen miktarin istenen degere esit oldugunu test eder
@@ -73,7 +65,6 @@ public class US_015_TC001 {
         Assert.assertEquals(spendinGoodPage.limitUsageXitems.getAttribute("value"), "5");
         //19.User limit per User kutusundaki girilen miktarin istenen degere esit oldugunu test eder
         Assert.assertEquals(spendinGoodPage.limitperUser.getAttribute("value"), "2");
-
 
     }
 }

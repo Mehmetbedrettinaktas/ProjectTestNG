@@ -590,8 +590,8 @@ public class SpendingGoodPage {
     //  public WebElement storeManager;
         @FindBy(xpath = "(//*[@class='text'])[6]")
         public WebElement coupons;
-      //  @FindBy(xpath = "(//*[text()='Add New'])[1]")
-      //  public WebElement addNew;
+        @FindBy(xpath = "(//*[text()='Add New'])[1]")
+        public WebElement addNeww;
         @FindBy(xpath = "//*[@id='title']")
         public WebElement codeBox;
         @FindBy(xpath = "//*[@id='description']")

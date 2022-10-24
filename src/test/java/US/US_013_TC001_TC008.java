@@ -47,7 +47,7 @@ public class US_013_TC001_TC008 {
         spendinGoodPage.coupons.click();
 
         //8.Coupons sayfasinda Add New'i tiklar
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
 
         //9.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC13001");
@@ -75,7 +75,7 @@ public class US_013_TC001_TC008 {
     @Test(priority = 2)
     public void testTC_02() throws InterruptedException {
         //1.Coupons sayfasinda Add New'i tiklar
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
 
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC13002");
@@ -108,7 +108,7 @@ public class US_013_TC001_TC008 {
         //1.Coupons sayfasinda Add New'i tiklar
         Thread.sleep(3000);
         //actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
 
         //2.Code kismini bos birakir
         spendinGoodPage.codeBox.sendKeys("");
@@ -130,7 +130,7 @@ public class US_013_TC001_TC008 {
         //1.Coupons sayfasinda Add New'i tiklar
         actions.sendKeys(Keys.PAGE_UP).perform();
         Thread.sleep(3000);
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
 
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC13004");
@@ -155,7 +155,7 @@ public class US_013_TC001_TC008 {
     public void testTC_05() throws InterruptedException {
         //1.Coupons sayfasinda Add New'i tiklar
         actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
 
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC13005");
@@ -195,7 +195,7 @@ public class US_013_TC001_TC008 {
     public void testTC_06() throws InterruptedException {
         //1.Coupons sayfasinda Add New'i tiklar
         actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
 
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC13006");
@@ -240,7 +240,7 @@ public class US_013_TC001_TC008 {
     public void testTC_07() throws InterruptedException {
         //1.Coupons sayfasinda Add New'i tiklar
         actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
 
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC13007");
@@ -277,7 +277,7 @@ public class US_013_TC001_TC008 {
         //1.Coupons sayfasinda Add New'i tiklar
         actions.sendKeys(Keys.PAGE_UP).perform();
         Thread.sleep(3000);
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
 
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC13008");

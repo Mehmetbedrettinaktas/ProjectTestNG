@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ce773b-4236-4f1b-9de5-ec98f73affa9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/US/US_013_TC001_TC008.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/US/US_013_TC001_TC008.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/US/US_014_TC001_TC008.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/US/US_014_TC001_TC008.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/US/US_015_TC001.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/US/US_015_TC001.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/SpendingGoodPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SpendingGoodPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/US/US_013_TC001_TC008.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/US/US_013_TC001_TC008.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/US/US_014_TC001_TC008.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/US/US_014_TC001_TC008.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/US/US_015_TC001.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/US/US_015_TC001.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/SpendingGoodPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/SpendingGoodPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +64,7 @@
       <recent name="C:\Projects\ProjectTestNG\src\test\java\utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.US_015_TC001.testTC_01">
+  <component name="RunManager" selected="TestNG.US_015_TC001">
     <configuration name="US_005" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.TsetNG_Bulutluoz" />
       <extension name="coverage">
@@ -149,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.US_015_TC001.testTC_01" />
         <item itemvalue="TestNG.US_015_TC001" />
+        <item itemvalue="TestNG.US_015_TC001.testTC_01" />
         <item itemvalue="TestNG.US_007" />
         <item itemvalue="TestNG.US_006" />
         <item itemvalue="TestNG.US_005" />

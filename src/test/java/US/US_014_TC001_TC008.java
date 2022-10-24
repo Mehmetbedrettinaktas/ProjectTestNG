@@ -45,7 +45,7 @@ public class US_014_TC001_TC008 {
     @Test(priority = 2)
     public void testTC_02() throws InterruptedException {
         //1.Coupons sayfasinda Add New'i tiklar
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC002");
         //3.Istenen Minimum spend miktari girer
@@ -73,7 +73,7 @@ public class US_014_TC001_TC008 {
 
         //1.Coupons sayfasinda Add New'i tiklar
         actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC003");
         //3.Istenen Minimum spend miktari girer
@@ -109,7 +109,7 @@ public class US_014_TC001_TC008 {
     public void testTC_04() throws InterruptedException {
         //1.Coupons sayfasinda Add New'i tiklar
         actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC004");
         //3.Individual use only seceneginni tiklar
@@ -136,7 +136,7 @@ public class US_014_TC001_TC008 {
         //1.Coupons sayfasinda Add New'i tiklar
         Thread.sleep(3000);
         actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC005");
         //3.Products kutusuna istenen ürünler yazilir
@@ -174,7 +174,7 @@ public class US_014_TC001_TC008 {
 
         //1.Coupons sayfasinda Add New'i tiklar
         actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC006");
         //3.Products kutusuna istenen ürünler yazilir
@@ -205,7 +205,7 @@ public class US_014_TC001_TC008 {
     public void testTC_07() throws InterruptedException {
         //1.Coupons sayfasinda Add New'i tiklar
         actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC007");
         //3.Products kategori kutusuna istenen ürünler yazilir
@@ -240,7 +240,7 @@ public class US_014_TC001_TC008 {
         //1.Coupons sayfasinda Add New'i tiklar
         Thread.sleep(3000);
         actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC008");
         //3.Products kategori kutusuna istenen kategoriler yazilir
@@ -272,7 +272,7 @@ public class US_014_TC001_TC008 {
         //1.Coupons sayfasinda Add New'i tiklar
         Thread.sleep(3000);
         actions.sendKeys(Keys.PAGE_UP).perform();
-        spendinGoodPage.addNew.click();
+        spendinGoodPage.addNeww.click();
         //2.Code kismina istenen kodu yazar
         spendinGoodPage.codeBox.sendKeys("TC009");
         //3.Email Restrictions kutusuna istenen email adresleri yazilir
