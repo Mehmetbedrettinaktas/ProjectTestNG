@@ -79,7 +79,6 @@ public class SpendingGoodPage {
         @FindBy(xpath ="//*[text()='Registration Successfully Completed.']")
         public static WebElement gecersizPasswordHataliMesaji;
 
-        /////////////////////////////////////////////////////////////
         //verification code div.email method classi
         @FindBy(css = "div.email")
         public static WebElement geciciEmail;
@@ -484,22 +483,22 @@ public class SpendingGoodPage {
         public WebElement storeManegerYazisi;
         @FindBy(xpath = "(//*[text()='Attributes'])[1]")
         public WebElement attributes;
-        @FindBy(xpath = "//input[@id='attributes_is_active_1']")
-        public WebElement colorButton;
-        @FindBy(xpath = "//input[@id='attributes_is_active_2']")
-        public WebElement sizeButton;
-        @FindBy(xpath = "(// input[@class='select2-search__field'])[2]")
-        public WebElement sizeDdmSurchBox;
-        @FindBy(xpath = "(//span[@title='Toggle Block'])[2]")
-        public WebElement colordropDownOk;
+        @FindBy(id= "attributes_is_active_1")
+        public WebElement colorRadioButton;
+        @FindBy(id = "attributes_is_active_2")
+        public WebElement sizeRadioButton;
+        @FindBy(xpath = "//select[@id='attributes_value_2']")
+        public WebElement sizeDdm;
+        @FindBy(xpath = "//select[@id='attributes_value_1']")
+        public WebElement colordropDownDown;
         @FindBy(xpath = "(//span[@title='Toggle Block'])[3]")
         public WebElement sizedropDownOk;
-        @FindBy(xpath = "(//*[text()='Toptan Ürün Gösterme Ayarları'])[1]")
+        @FindBy(id = "wcfm_products_manage_form_toptan-urun-gosterme-ayarlari_head")
         public WebElement toptanUrunGostermeAyarlari;
         @FindBy(xpath = "//select[@id='piecetype']")
-        public WebElement pieceTypeSurchBox;
-        @FindBy(xpath = "(//*[text()='Units Per Piece'])[1]")
-        public WebElement unitsPerPiece;
+        public WebElement pieceTypeDropDown;
+        @FindBy(xpath = "//p[@class='unitpercart wcfm_title field_61d33933d88bd']")
+        public WebElement unitsPerPieceYaziElementi;
         @FindBy(xpath = "(//*[text()='Min Order Quantity?'])[1]")
         public WebElement minOrderQuantity;
         @FindBy(xpath = "(//input[@class='select2-search__field'])[2]")
@@ -508,16 +507,26 @@ public class SpendingGoodPage {
         public WebElement attributesSubmitButton;
         @FindBy(xpath = "(//*[text()='Toptan Ürün Gösterme Ayarları'])[2]")
         public WebElement toptanUrunGostermeAyarlariYaziElenemti;
-
-
-
-
-
-
-
-
-
-
+        @FindBy(xpath = "//input[@id='unitpercart']")
+        public WebElement unitsPerPiece;
+        @FindBy(id= "wcfm_products_simple_submit_button")
+        public WebElement tUgASubmit;
+        @FindBy(xpath= "//tbody")
+        public List<WebElement> ordersList;
+        @FindBy(xpath= "(//*[text()='Orders'])[2]")
+        public WebElement orderButton;
+        @FindBy(xpath= "(//*[text()='Downloads'])[2]")
+        public WebElement dowlands;
+        @FindBy(xpath= "//tbody//tr//td")
+        public List<WebElement> dowlandsProdockt;
+        @FindBy(xpath= "(//*[text()='Addresses'])[2]")
+        public WebElement adresses;
+        @FindBy(xpath= "//tbody//tr")
+        public List<WebElement> adressesWebElements;
+        @FindBy(xpath= "(//*[text()='Account details'])[1]")
+        public WebElement accountDetailsButton;
+        @FindBy(xpath= "//input[@id='account_first_name']")
+        public WebElement firstName;
 
 
 
@@ -807,8 +816,8 @@ public class SpendingGoodPage {
         public WebElement cart;
         @FindBy (xpath = "//*[.='Checkout']")
         public WebElement checkout;
-        @FindBy (xpath = "//input[@name='billing_first_name']")
-        public WebElement firstName;
+       // @FindBy (xpath = "//input[@name='billing_first_name']")
+       // public WebElement firstName;
         @FindBy (xpath = "//button[@id='place_order']")
         public WebElement placeOrder;
         @FindBy(xpath = "//li[@class='wc_payment_method payment_method_cod']")
