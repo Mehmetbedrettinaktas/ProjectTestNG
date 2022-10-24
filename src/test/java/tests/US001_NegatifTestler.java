@@ -23,7 +23,10 @@ public class US001_NegatifTestler extends TestBaseRapor {
 
     @Test (priority = 1)
     public void bosEmail() throws InterruptedException {
+
         SpendingGoodPage spendingGoodPage = new SpendingGoodPage();
+
+
         extentTest=extentReports.createTest("BosEmail","Kullanici Hesap Acma islemlerini yaparken Email kutusunu bos birakmamali");
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         extentTest.info("Spendinggood anasayfaya gidildi");
