@@ -813,8 +813,8 @@ public class SpendingGoodPage {
         public WebElement cart;
         @FindBy (xpath = "//*[.='Checkout']")
         public WebElement checkout;
-        @FindBy (xpath = "//input[@name='billing_first_name']")
-        public WebElement firstName;
+       // @FindBy (xpath = "//input[@name='billing_first_name']")
+       // public WebElement firstName;
         @FindBy (xpath = "//button[@id='place_order']")
         public WebElement placeOrder;
         @FindBy(xpath = "//li[@class='wc_payment_method payment_method_cod']")

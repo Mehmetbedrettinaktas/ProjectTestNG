@@ -14,12 +14,12 @@
 <suite name="istenen methodlari calistirma" verbose="3">
     <test name="method">
         <classes>
-            <class name="US.day16_notations.C03_Priority">
+            <class name="tests.day16_notations.C03_Priority">
                 <methods>
                     <include name="test02"/>
                 </methods>
             </class>
-            <class name="US.day16_notations.C04_DependsOnMethods">
+            <class name="tests.day16_notations.C04_DependsOnMethods">
                 <methods>
                     <exclude name="test03"/>
                 </methods>

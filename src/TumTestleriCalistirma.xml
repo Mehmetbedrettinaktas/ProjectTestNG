@@ -2,7 +2,7 @@
 <suite name="tum testleri calistirma">
   <test name="regression test">
       <packages>
-          <package name="US.*"/>
+          <package name="tests.*"/>
       </packages>
   </test>
 </suite>
