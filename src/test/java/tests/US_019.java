@@ -4,7 +4,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -28,18 +27,15 @@ public class US_019 extends TestBaseRapor {
     //11.Vendor takipcilerin islemlerini(Actions) görür
 
 
-    SpendingGoodPage spendingGoodPage = new SpendingGoodPage();
-    Actions actions = new Actions(Driver.getDriver());
-    SoftAssert softAssert = new SoftAssert();
-
     @Test
     public void test01() throws IOException {
-
+        SpendingGoodPage spendingGoodPage = new SpendingGoodPage();
+        Actions actions = new Actions(Driver.getDriver());
+        SoftAssert softAssert = new SoftAssert();
         // US_19 TC01-->Vendor olarak takipcilerimin isimlerini,email adreslerini ve islemlerini görmeyelim
-
         extentTest = extentReports.createTest("Takipciler ", "Takipcilerin bilgileri");
         //1 Vendor  "http://spendinggood.com/"  adresine  gider
-        Driver.getDriver().get(ConfigReader.getProperty("spendinggood"));
+        Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         extentTest.info("SpendingGood sayfasina gidildi");
         //2 Vendor 'Sign In' a tıklar
         spendingGoodPage.signIn1.click();
@@ -47,9 +43,9 @@ public class US_019 extends TestBaseRapor {
         //3.Vendor  gecerli Username girer
         //4.Vendor gecerli Password girer
         //5.Vendor 'SIGN IN' butonuna tiklar
-        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("userName"));
+        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("user"));
         extentTest.info("Gecerli Username girildi");
-        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("password")).sendKeys(Keys.ENTER).perform();
+        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("pass")).sendKeys(Keys.ENTER).perform();
         extentTest.info("Gecerli password girildi ve SIGN IN  butonuna tiklandi");
         ReusableMethods.waitFor(2);
         //6.Vendor 'My Account' a tiklar
@@ -67,21 +63,22 @@ public class US_019 extends TestBaseRapor {
         //9. Vendor takipcilerin  isimlerini(Name) görür
         String actualFollowers1 = spendingGoodPage.nameEmailActions.getText();
         String expectedFollewers1 = "No data in the table";
-        softAssert.assertNotEquals(actualFollowers1, expectedFollewers1,"Takipcilerin isimleri görülemedi");
+        softAssert.assertNotEquals(actualFollowers1, expectedFollewers1, "Takipcilerin isimleri gorulemedi");
         extentTest.info("Takipcilerin isimleri görüldü");
         //10.Vendor takipcilerin  Email adreslerini(Email) görür
         String actualFollowers2 = spendingGoodPage.nameEmailActions.getText();
         String expectedFollewers2 = "No data in the table";
-        softAssert.assertNotEquals(actualFollowers2, expectedFollewers2,"Takipcilerin Email adresleri görülemedi");
+        softAssert.assertNotEquals(actualFollowers2, expectedFollewers2, "Takipcilerin Email adresleri gorulemedi");
         extentTest.info("Takipcilerin Email adresleri görüldü");
         //11.Vendor takipcilerin islemlerini(Actions) görür
         String actualFollowers3 = spendingGoodPage.nameEmailActions.getText();
         String expectedFollewers3 = "No data in the table";
-        softAssert.assertNotEquals(actualFollowers3, expectedFollewers3,"Takipcilerin islemleri görülemedi");
+        softAssert.assertNotEquals(actualFollowers3, expectedFollewers3, "Takipcilerin islemleri gorulemedi");
         extentTest.info("Takipcilerin islemleri görüldü");
         softAssert.assertAll();
         extentTest.pass("Takipcilerin bilgileri görüldü");
 
+        Driver.closeDriver();
 
 
     }
