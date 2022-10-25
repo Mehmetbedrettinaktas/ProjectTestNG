@@ -13,7 +13,7 @@ import utilities.TestBaseRapor;
 
 import java.io.IOException;
 
-public class US_019 extends TestBaseRapor {
+public class US019 extends TestBaseRapor {
 
     //1 Vendor  "http://spendinggood.com/"  adresine  gider
     //2 Vendor 'Sign In' a tıklar

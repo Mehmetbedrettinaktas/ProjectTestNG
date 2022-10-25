@@ -9,9 +9,8 @@ import org.testng.annotations.Test;
 import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
 
-public class US_015_TC001 {
+public class US015 {
 
     SpendingGoodPage spendinGoodPage = new SpendingGoodPage();
     Actions actions = new Actions(Driver.getDriver());

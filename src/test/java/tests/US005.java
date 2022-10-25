@@ -11,7 +11,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US_005 {
+public class US005 {
     SpendingGoodPage spendingGoodPage = new SpendingGoodPage();
     Actions action = new Actions(Driver.getDriver());
 

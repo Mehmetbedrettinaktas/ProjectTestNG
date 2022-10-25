@@ -11,7 +11,7 @@ import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_014_TC001_TC008 {
+public class US014 {
 
 
     SpendingGoodPage spendinGoodPage = new SpendingGoodPage();

@@ -11,9 +11,8 @@ import org.testng.annotations.Test;
 import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
 
-public class US_013_TC001_TC008 {
+public class US013 {
     SpendingGoodPage spendinGoodPage = new SpendingGoodPage();
     Select select;
     Actions actions = new Actions(Driver.getDriver());

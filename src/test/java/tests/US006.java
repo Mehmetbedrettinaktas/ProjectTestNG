@@ -9,7 +9,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US_006 {
+public class US006 {
     SpendingGoodPage spendingGoodPage = new SpendingGoodPage();
     Actions action = new Actions(Driver.getDriver());
 
