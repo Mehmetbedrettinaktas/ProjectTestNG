@@ -11,7 +11,7 @@ import utilities.ReusableMethods;
 
 import java.io.IOException;
 
-public class US_04 {
+public class US004 {
 
         @Test
         public void test6() {
