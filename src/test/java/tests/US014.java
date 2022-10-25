@@ -1,6 +1,5 @@
 package tests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -11,7 +10,10 @@ import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_014 {
+
+public class US014 {
+
+
 
     SpendingGoodPage spendinGoodPage = new SpendingGoodPage();
     Actions actions = new Actions(Driver.getDriver());

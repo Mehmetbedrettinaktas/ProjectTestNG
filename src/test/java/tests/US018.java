@@ -15,7 +15,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class US_018 extends TestBaseRapor {
+public class US018 extends TestBaseRapor {
 
     static SpendingGoodPage spendingGoodPage;
     static Actions actions;

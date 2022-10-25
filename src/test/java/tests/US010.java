@@ -17,7 +17,7 @@ import utilities.ReusableMethods;
 
 import java.time.Duration;
 
-public class US010_TC001_TC002_TC003 {
+public class US010 {
     Select select;
     JavascriptExecutor jse=(JavascriptExecutor) Driver.getDriver();
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
@@ -68,7 +68,7 @@ public class US010_TC001_TC002_TC003 {
         ReusableMethods.waitFor(2);
         //sgp.colordropDownOk.click();
        // sgp.colorDdmSurchBox.click();
-        WebElement dropDownColor=sgp.colordropDownDown;
+        WebElement dropDownColor=sgp.colordropDown;
         select=new Select(dropDownColor);
         select.selectByVisibleText("Black");
         softAssert.assertEquals(select.getFirstSelectedOption().getText(),"Black");
