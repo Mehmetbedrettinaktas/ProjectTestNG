@@ -10,9 +10,9 @@ import java.util.List;
 public class SpendingGoodPage {
 
 
-        public SpendingGoodPage(){
+        public SpendingGoodPage() {
 
-            PageFactory.initElements(Driver.getDriver(),this);
+                PageFactory.initElements(Driver.getDriver(), this);
 
         }
 // ******************  Fatma Hanim ***************************
@@ -76,7 +76,7 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
         public static WebElement gecersizEmailHataMesaji;
 
-        @FindBy(xpath ="//*[text()='Registration Successfully Completed.']")
+        @FindBy(xpath = "//*[text()='Registration Successfully Completed.']")
         public static WebElement gecersizPasswordHataliMesaji;
 
         //verification code div.email method classi
@@ -94,88 +94,81 @@ public class SpendingGoodPage {
         public WebElement visitNow;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // ************ Mihrican Hanim ************
+
+
+
+        @FindBy(xpath = "//*[@value='Sign In']")
+        public WebElement userpassSignIn;
+        @FindBy(xpath = "//a[text()='Orders']")
+        public WebElement orders;
+
+        @FindBy(xpath = "(//i[@class='w-icon-cart'])[1]")
+        public WebElement cartButton;
+
+        @FindBy(xpath = "//a[@class='button wc-forward']")
+        public WebElement viewCart;
+        @FindBy(xpath = "//button[@name='apply_coupon']")
+        public WebElement applyButton;
+        @FindBy(xpath = "//p[@class='woocommerce-shipping-destination']")
+        public WebElement shippinginfo;
+        @FindBy(xpath = "//a[@class='checkout-button button alt wc-forward']")
+        public WebElement procedToCheckOut;
+        @FindBy(xpath = "//*[text()='Continue Shopping']")
+        public WebElement continueShopping;
+        @FindBy(xpath = "//button[@name='clear_cart']")
+        public WebElement clearCartButton;
+        @FindBy(xpath = "//p[text()='Your cart is currently empty.']")
+        public WebElement ClearTextYazisi;
+        @FindBy(xpath = "//p[text()='No products in the cart.']")
+        public WebElement cartNoProductsYazisi;
+
+
+
+
+
+
+
+
+
+        @FindBy(xpath = "//*[@id='order_comments']")
+        public WebElement orderNotes;
+        @FindBy(xpath = "//*[text()='Product']")
+        public WebElement myOrderproduct;
+        @FindBy(xpath = "//*[text()='Price']")
+        public WebElement myOrderPrice;
+        @FindBy(xpath = "//*[text()='Quantity']")
+        public WebElement myOrderQuantity;
+        @FindBy(xpath = "//*[text()='Subtotal']")
+        public WebElement myOrderSubTotal;
+        @FindBy(xpath = "//button[@title='Minus']")
+        public WebElement minusButton;
+        @FindBy(xpath = "//div[@id='product-14989']")
+        public WebElement superKahramanOyuncak;
+        @FindBy(xpath = "//div[@id='product-15375']")
+        public WebElement hoparlor;
+        @FindBy(xpath = "//div[@id='product-15391']")
+        public WebElement arcelik;
+        @FindBy(xpath = "//div[@id='product-14986']")
+        public WebElement kalemlik;
+        @FindBy(xpath = "(//span[@class='quantity'])[1]")
+        public WebElement artieksiKutu;
+        @FindBy(xpath = "//*[@name='update_cart']")
+        public WebElement updateCartButton;
+
+        @FindBy(xpath = "//p[@class='stock in-stock']")
+        public WebElement ilkinStokInformation;
+
+        @FindBy(xpath = "//input[@type='number']")
+        public WebElement sonInStokInformation;
+
+       @FindBy(xpath = "//a[@class='btn btn-dark btn-link btn-icon-right btn-close']")
+       public WebElement closeButton;
+
+
+
+
+
 
 
 
