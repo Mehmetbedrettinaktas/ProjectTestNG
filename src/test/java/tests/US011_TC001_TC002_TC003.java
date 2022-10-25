@@ -1,4 +1,4 @@
-package US;
+package tests;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -12,6 +12,8 @@ import org.testng.asserts.SoftAssert;
 import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
 
 import java.time.Duration;
 
@@ -38,27 +40,36 @@ public class US011_TC001_TC002_TC003 {
         sgp.myAccount.click();
         String expectedResult="My Account";
         String actualResult=Driver.getDriver().getTitle();
-        softAssert.assertEquals(expectedResult,actualResult);
+        softAssert.assertTrue(actualResult.contains(expectedResult));
         Thread.sleep(3000);
         //6. Kullanici Store Manger sekmesini tiklayabilmeli
         sgp.storeManager.click();
         //7.Kullanici Store Manager sayfasini gormeli
         String expectedYaziElementi="Store Manager";
         String actualYaziElementi=Driver.getDriver().getTitle();
-        softAssert.assertEquals(expectedYaziElementi,actualYaziElementi);
+        softAssert.assertTrue(actualYaziElementi.contains(expectedYaziElementi));
         //8. Kullanici Products sekmesindeki addNew butonunu tiklayabilmeli
         sgp.products.click();
         WebElement addNew=wait.until(ExpectedConditions.visibilityOf(sgp.addNew));
         addNew.click();
         Thread.sleep(2000);
-        // 9. kullanici Toptan Ürün gösterme Ayarlarini gorebilmeli ve tiklayabilmeli
-
-        //10. Kullanici acilan sayfada Piece Type (urun Cesidi) secebilmeli
+        // 9. kullanici Toptan Ürün gösterme Ayarlarini  tiklayabilmeli
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        WebElement tUgAyarlari=sgp.toptanUrunGostermeAyarlari;
+        jse.executeScript("arguments[0].scrollIntoView(true);", tUgAyarlari);
+        jse.executeScript("arguments[0].click()", tUgAyarlari);
+        //10. Kullanici acilan sayfada Piece Type (urun Cesidi) girebilmeli
+        WebElement dropDown= sgp.pieceTypeDropDown;
+        select=new Select(dropDown);
+        select.selectByVisibleText("Piece");
+        actions.sendKeys(Keys.TAB).sendKeys("3").sendKeys(Keys.TAB).sendKeys("4").perform();
         softAssert.assertAll();
+        Driver.closeDriver();
+
     }
     @Test()
     public void testCase002() throws InterruptedException {
-// 1. Kullanici https://spendinggood.com/my-account-2/ adresine gider
+        // 1. Kullanici https://spendinggood.com/my-account-2/ adresine gider
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         //2.Kullanici Sign In buttonuna tiklayarak sign In sayfasina gorebilmeli
         sgp.signIn.click();
@@ -72,28 +83,33 @@ public class US011_TC001_TC002_TC003 {
         sgp.myAccount.click();
         String expectedResult="My Account";
         String actualResult=Driver.getDriver().getTitle();
-        softAssert.assertEquals(expectedResult,actualResult);
-        Thread.sleep(3000);
+        softAssert.assertTrue(actualResult.contains(expectedResult));
+        ReusableMethods.waitFor(2);
         //6. Kullanici Store Manger sekmesini tiklayabilmeli
         sgp.storeManager.click();
         //7.Kullanici Store Manager sayfasini gormeli
         String expectedYaziElementi="Store Manager";
         String actualYaziElementi=Driver.getDriver().getTitle();
-        softAssert.assertEquals(expectedYaziElementi,actualYaziElementi);
+        softAssert.assertTrue(actualYaziElementi.contains(expectedYaziElementi));
         //8. Kullanici Products sekmesindeki addNew butonunu tiklayabilmeli
         sgp.products.click();
         WebElement addNew=wait.until(ExpectedConditions.visibilityOf(sgp.addNew));
         addNew.click();
         Thread.sleep(2000);
-        // 9. kullanici Toptan Ürün gösterme Ayarlarini gorebilmeli ve tiklayabilmeli
+        // 9. kullanici Toptan Ürün gösterme Ayarlarini  tiklayabilmeli
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        WebElement tUgAyarlari=sgp.toptanUrunGostermeAyarlari;
+        jse.executeScript("arguments[0].scrollIntoView(true);", tUgAyarlari);
+        jse.executeScript("arguments[0].click()", tUgAyarlari);
+        //10. Kullanici acilan sayfada Units per Piece kismini gorebilmeli
+       sgp.unitsPerPieceYaziElementi.isDisplayed();
 
-        sgp.toptanUrunGostermeAyarlari.click();
-        //10. Kullanici acilan sayfada Units per Piece kismina istedigi sayiyi girebilmeli
         softAssert.assertAll();
+        Driver.closeDriver();
     }
     @Test()
     public void testCase003() throws InterruptedException {
-// 1. Kullanici https://spendinggood.com/my-account-2/ adresine gider
+        // 1. Kullanici https://spendinggood.com/my-account-2/ adresine gider
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         //2.Kullanici Sign In buttonuna tiklayarak sign In sayfasina gorebilmeli
         sgp.signIn.click();
@@ -107,24 +123,24 @@ public class US011_TC001_TC002_TC003 {
         sgp.myAccount.click();
         String expectedResult="My Account";
         String actualResult=Driver.getDriver().getTitle();
-        softAssert.assertEquals(expectedResult,actualResult);
+        softAssert.assertTrue(actualResult.contains(expectedResult));
         Thread.sleep(3000);
         //6. Kullanici Store Manger sekmesini tiklayabilmeli
         sgp.storeManager.click();
         //7.Kullanici Store Manager sayfasini gormeli
         String expectedYaziElementi="Store Manager";
         String actualYaziElementi=Driver.getDriver().getTitle();
-        softAssert.assertEquals(expectedYaziElementi,actualYaziElementi);
+        softAssert.assertTrue(actualYaziElementi.contains(expectedYaziElementi));
         //8. Kullanici Products sekmesindeki addNew butonunu tiklayabilmeli
         sgp.products.click();
         WebElement addNew=wait.until(ExpectedConditions.visibilityOf(sgp.addNew));
         addNew.click();
-
-        // 9. kullanici Toptan Ürün gösterme Ayarlarini gorebilmeli ve tiklayabilmeli
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
         Thread.sleep(2000);
-        sgp.toptanUrunGostermeAyarlari.click();
-        sgp.toptanUrunGostermeAyarlariYaziElenemti.isDisplayed();
+        // 9. kullanici Toptan Ürün gösterme Ayarlarini gorebilmeli ve tiklayabilmeli
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        WebElement tUgAyarlari=sgp.toptanUrunGostermeAyarlari;
+        jse.executeScript("arguments[0].scrollIntoView(true);", tUgAyarlari);
+        jse.executeScript("arguments[0].click()", tUgAyarlari);
 
         //10. Kullanici acilan sayfada Min order quantity(minimum Siparis miktari) girebilmeli
 
