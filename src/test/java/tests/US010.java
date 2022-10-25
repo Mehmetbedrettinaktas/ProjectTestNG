@@ -68,7 +68,7 @@ public class US010 {
         ReusableMethods.waitFor(2);
         //sgp.colordropDownOk.click();
        // sgp.colorDdmSurchBox.click();
-        WebElement dropDownColor=sgp.colordropDownDown;
+        WebElement dropDownColor=sgp.colordropDown;
         select=new Select(dropDownColor);
         select.selectByVisibleText("Black");
         softAssert.assertEquals(select.getFirstSelectedOption().getText(),"Black");
