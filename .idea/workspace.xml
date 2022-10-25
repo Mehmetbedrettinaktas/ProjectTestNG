@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ce773b-4236-4f1b-9de5-ec98f73affa9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/US012_TC001_TC002_TC003_TC004.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SpendingGoodPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SpendingGoodPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/US010_TC001_TC002_TC003.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/US010_TC001_TC002_TC003.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/US011_TC001_TC002_TC003.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/US011_TC001_TC002_TC003.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/US_013_TC001_TC008.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/US_013_TC_deneme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/US_013.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/US_014_TC001_TC008.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/US_015_TC001.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/US_14_TC_deneme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/US_014.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/US_15_TC_deneme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/US_015.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/SpendingGoodPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/SpendingGoodPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/US010_TC001_TC002_TC003.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/US010_TC001_TC002_TC003.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/US011_TC001_TC002_TC003.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/US011_TC001_TC002_TC003.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/US_013_TC_deneme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/US_14_TC_deneme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/US_15_TC_deneme.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +68,7 @@
       <recent name="C:\Projects\ProjectTestNG\src\test\java\utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.US_14_TC_deneme">
+  <component name="RunManager" selected="TestNG.US_015">
     <configuration name="US_013_TC_deneme" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProjeTestNG" />
       <extension name="coverage">
@@ -80,6 +86,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="US_015" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProjeTestNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.US_015" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="US_14_TC_deneme" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProjeTestNG" />
       <extension name="coverage">
@@ -90,23 +113,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.US_14_TC_deneme" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US_14_Tests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ProjeTestNG" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.US_14_Tests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -151,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.US_14_TC_deneme" />
-        <item itemvalue="TestNG.US_15_TC_deneme.testTC_01" />
+        <item itemvalue="TestNG.US_015" />
         <item itemvalue="TestNG.US_013_TC_deneme" />
-        <item itemvalue="TestNG.US_14_Tests" />
+        <item itemvalue="TestNG.US_14_TC_deneme" />
         <item itemvalue="TestNG.US_15_TC_deneme" />
+        <item itemvalue="TestNG.US_15_TC_deneme.testTC_01" />
       </list>
     </recent_temporary>
   </component>
