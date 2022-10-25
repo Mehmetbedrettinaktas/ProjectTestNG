@@ -939,7 +939,36 @@ public class SpendingGoodPage {
 
 
         // ************Suleyman bey ***************
-
+        @FindBy(xpath = "//span[contains(text(),'Reviews')]")
+        public WebElement reviews;
+    @FindBy(xpath = " //span[contains(text(),'Reports')]")
+    public WebElement reports;
+    @FindBy(xpath = "//*[text()='Product Reviews']")
+    public WebElement producktreviews;
+    @FindBy(xpath = "(//*[@class='wcfmmp-author-meta'])[1]")
+    public WebElement author;
+    @FindBy(xpath = "(//*[@class='wcfmmp-comments-content'])[1]")
+    public WebElement comment;
+    @FindBy(xpath = "(//*[@class='wcfmmp-rating'])[1]")
+    public WebElement rating;
+    @FindBy(xpath = "//*[text()='15 October 2022 16:48']")
+    public WebElement dated;
+    @FindBy(xpath = "//*[text()='Year']")
+    public WebElement reportsyear;
+    @FindBy(xpath = "//*[text()='Last Month']")
+    public WebElement lastmonth;
+    @FindBy(xpath = "(//*[text()='This Month'])[1]")
+    public WebElement thismonath;
+    @FindBy(xpath = "//*[text()='Last 7 Days']")
+    public WebElement last7days;
+    @FindBy(xpath = "//*[@class='wcfm-date-range']")
+    public WebElement custom;
+    @FindBy(xpath = "//*[@id='chart-placeholder-canvas']")
+    public WebElement rapor;
+    @FindBy(xpath = "(//div[text()='18'])[1]")
+    public WebElement date1;
+    @FindBy(xpath = "(//div[text()='18'])[2]")
+    public WebElement date2;
 
 
 
