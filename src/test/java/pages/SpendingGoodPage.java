@@ -411,16 +411,14 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//*[@class='shipping_class wcfm_title']")
         public WebElement shippingClass;
 
+         @FindBy(xpath = "//*[text()='Gateaway']")
+         public WebElement gateaway;
 
+         @FindBy(xpath = "//*[@id='wcfm_products_simple_submit_button']")
+         public WebElement submit;
 
-
-
-
-
-
-
-
-
+         @FindBy(xpath = "(//*[contains(text(),'Product Successfully Published.')])[1]")
+         public WebElement yazi;
 
 
 
