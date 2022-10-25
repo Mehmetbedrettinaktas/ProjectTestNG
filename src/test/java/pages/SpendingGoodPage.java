@@ -10,9 +10,9 @@ import java.util.List;
 public class SpendingGoodPage {
 
 
-        public SpendingGoodPage(){
+        public SpendingGoodPage() {
 
-            PageFactory.initElements(Driver.getDriver(),this);
+                PageFactory.initElements(Driver.getDriver(), this);
 
         }
 // ******************  Fatma Hanim ***************************
@@ -76,7 +76,7 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
         public static WebElement gecersizEmailHataMesaji;
 
-        @FindBy(xpath ="//*[text()='Registration Successfully Completed.']")
+        @FindBy(xpath = "//*[text()='Registration Successfully Completed.']")
         public static WebElement gecersizPasswordHataliMesaji;
 
         //verification code div.email method classi
@@ -94,88 +94,81 @@ public class SpendingGoodPage {
         public WebElement visitNow;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // ************ Mihrican Hanim ************
+
+
+
+        @FindBy(xpath = "//*[@value='Sign In']")
+        public WebElement userpassSignIn;
+        @FindBy(xpath = "//a[text()='Orders']")
+        public WebElement orders;
+
+        @FindBy(xpath = "(//i[@class='w-icon-cart'])[1]")
+        public WebElement cartButton;
+
+        @FindBy(xpath = "//a[@class='button wc-forward']")
+        public WebElement viewCart;
+        @FindBy(xpath = "//button[@name='apply_coupon']")
+        public WebElement applyButton;
+        @FindBy(xpath = "//p[@class='woocommerce-shipping-destination']")
+        public WebElement shippinginfo;
+        @FindBy(xpath = "//a[@class='checkout-button button alt wc-forward']")
+        public WebElement procedToCheckOut;
+        @FindBy(xpath = "//*[text()='Continue Shopping']")
+        public WebElement continueShopping;
+        @FindBy(xpath = "//button[@name='clear_cart']")
+        public WebElement clearCartButton;
+        @FindBy(xpath = "//p[text()='Your cart is currently empty.']")
+        public WebElement ClearTextYazisi;
+        @FindBy(xpath = "//p[text()='No products in the cart.']")
+        public WebElement cartNoProductsYazisi;
+
+
+
+
+
+
+
+
+
+        @FindBy(xpath = "//*[@id='order_comments']")
+        public WebElement orderNotes;
+        @FindBy(xpath = "//*[text()='Product']")
+        public WebElement myOrderproduct;
+        @FindBy(xpath = "//*[text()='Price']")
+        public WebElement myOrderPrice;
+        @FindBy(xpath = "//*[text()='Quantity']")
+        public WebElement myOrderQuantity;
+        @FindBy(xpath = "//*[text()='Subtotal']")
+        public WebElement myOrderSubTotal;
+        @FindBy(xpath = "//button[@title='Minus']")
+        public WebElement minusButton;
+        @FindBy(xpath = "//div[@id='product-14989']")
+        public WebElement superKahramanOyuncak;
+        @FindBy(xpath = "//div[@id='product-15375']")
+        public WebElement hoparlor;
+        @FindBy(xpath = "//div[@id='product-15391']")
+        public WebElement arcelik;
+        @FindBy(xpath = "//div[@id='product-14986']")
+        public WebElement kalemlik;
+        @FindBy(xpath = "(//span[@class='quantity'])[1]")
+        public WebElement artieksiKutu;
+        @FindBy(xpath = "//*[@name='update_cart']")
+        public WebElement updateCartButton;
+
+        @FindBy(xpath = "//p[@class='stock in-stock']")
+        public WebElement ilkinStokInformation;
+
+        @FindBy(xpath = "//input[@type='number']")
+        public WebElement sonInStokInformation;
+
+       @FindBy(xpath = "//a[@class='btn btn-dark btn-link btn-icon-right btn-close']")
+       public WebElement closeButton;
+
+
+
+
+
 
 
 
@@ -418,16 +411,14 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//*[@class='shipping_class wcfm_title']")
         public WebElement shippingClass;
 
+         @FindBy(xpath = "//*[text()='Gateaway']")
+         public WebElement gateaway;
 
+         @FindBy(xpath = "//*[@id='wcfm_products_simple_submit_button']")
+         public WebElement submit;
 
-
-
-
-
-
-
-
-
+         @FindBy(xpath = "(//*[contains(text(),'Product Successfully Published.')])[1]")
+         public WebElement yazi;
 
 
 
@@ -635,8 +626,8 @@ public class SpendingGoodPage {
         public WebElement individualUse;
         @FindBy(xpath = "//*[@id='exclude_sale_items']")
         public WebElement excludeSale;
-     //   @FindBy(xpath = "(//*[@class='select2-search__field'])[1]")
-     //   public WebElement products;
+        @FindBy(xpath = "(//*[@class='select2-search__field'])[1]")
+        public WebElement product;
         @FindBy(xpath = "(//*[@class='select2-search__field'])[2]")
         public WebElement excludeProducts;
         @FindBy(xpath = "(//*[@class='select2-search__field'])[3]")
@@ -659,7 +650,10 @@ public class SpendingGoodPage {
         public WebElement choiceProductsKAt;
         @FindBy(xpath = "(//*[@class='select2-selection__choice'])[2]")
         public WebElement choiceProductsExcKat;
-
+        @FindBy(xpath = "(//*[@class='wcfm_coupon_delete wcfm-action-icon'])[1]")
+        public WebElement delete;
+        @FindBy(xpath = "(//*[@class='coupon-types coupon-types-percent'])[1]")
+        public WebElement discountTyp;
 
 
 
@@ -945,7 +939,36 @@ public class SpendingGoodPage {
 
 
         // ************Suleyman bey ***************
-
+        @FindBy(xpath = "//span[contains(text(),'Reviews')]")
+        public WebElement reviews;
+    @FindBy(xpath = " //span[contains(text(),'Reports')]")
+    public WebElement reports;
+    @FindBy(xpath = "//*[text()='Product Reviews']")
+    public WebElement producktreviews;
+    @FindBy(xpath = "(//*[@class='wcfmmp-author-meta'])[1]")
+    public WebElement author;
+    @FindBy(xpath = "(//*[@class='wcfmmp-comments-content'])[1]")
+    public WebElement comment;
+    @FindBy(xpath = "(//*[@class='wcfmmp-rating'])[1]")
+    public WebElement rating;
+    @FindBy(xpath = "//*[text()='15 October 2022 16:48']")
+    public WebElement dated;
+    @FindBy(xpath = "//*[text()='Year']")
+    public WebElement reportsyear;
+    @FindBy(xpath = "//*[text()='Last Month']")
+    public WebElement lastmonth;
+    @FindBy(xpath = "(//*[text()='This Month'])[1]")
+    public WebElement thismonath;
+    @FindBy(xpath = "//*[text()='Last 7 Days']")
+    public WebElement last7days;
+    @FindBy(xpath = "//*[@class='wcfm-date-range']")
+    public WebElement custom;
+    @FindBy(xpath = "//*[@id='chart-placeholder-canvas']")
+    public WebElement rapor;
+    @FindBy(xpath = "(//div[text()='18'])[1]")
+    public WebElement date1;
+    @FindBy(xpath = "(//div[text()='18'])[2]")
+    public WebElement date2;
 
 
 
