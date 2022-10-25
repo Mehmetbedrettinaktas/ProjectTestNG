@@ -16,6 +16,7 @@ import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 public class US_003 extends TestBaseRapor {
+
         SpendingGoodPage spengood=new SpendingGoodPage();
         Faker faker=new Faker();
         Actions actions=new Actions(Driver.getDriver());
