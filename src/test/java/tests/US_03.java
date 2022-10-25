@@ -239,6 +239,7 @@ public class US_03 extends TestBaseRapor{
             extentTest.info("Checkout a tiklandi");
             //8. Vendor acilan sayfada BILLING DETAILS e gelir
             //9. VendorFirst name,Last name,Company name bilgilerini girer
+            ReusableMethods.waitFor(2);
             spengood.firstName.clear();
             spengood.firstName.sendKeys("Ahmet4");
             spengood.lastName.clear();
