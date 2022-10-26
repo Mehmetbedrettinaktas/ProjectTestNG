@@ -12,7 +12,7 @@ import utilities.ReusableMethods;
 
 import java.util.ArrayList;
 
-public class US16_17 {
+public class US016_017 {
     public Object kisilerListesi;
     Actions actions=new Actions(Driver.getDriver());
     SpendingGoodPage spendingGoodPage =new SpendingGoodPage();
