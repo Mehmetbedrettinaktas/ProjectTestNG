@@ -1,6 +1,5 @@
 package tests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -11,11 +10,15 @@ import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_14_TC_deneme {
+
+public class US014 {
+
+
 
     SpendingGoodPage spendinGoodPage = new SpendingGoodPage();
     Actions actions = new Actions(Driver.getDriver());
     JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+    WebElement kupon = spendinGoodPage.coupons;
 
 
     @Test(priority = 1)
@@ -36,8 +39,6 @@ public class US_14_TC_deneme {
         //6.Store Manager butonuna tiklar
         spendinGoodPage.storeManager.click();
         //7.Store manager sayfasinda Coupons‘ u tiklar
-        //actions.sendKeys(Keys.PAGE_UP).perform();
-        //spendinGoodPage.coupons.click();
         WebElement kupon = spendinGoodPage.coupons;
         jse.executeScript("arguments[0].scrollIntoView(true);", kupon);
         jse.executeScript("arguments[0].click();", kupon);
@@ -118,13 +119,10 @@ public class US_14_TC_deneme {
         WebElement individual = spendinGoodPage.individualUse;
         jse.executeScript("arguments[0].scrollIntoView(true);", individual);
         jse.executeScript("arguments[0].click();", individual);
-        //actions.sendKeys(Keys.PAGE_DOWN).perform();
-        // spendinGoodPage.individualUse.click();
         //4.Exclude sale items secenegini tiklar
         WebElement exclude = spendinGoodPage.excludeSale;
         jse.executeScript("arguments[0].scrollIntoView(true);", exclude);
         jse.executeScript("arguments[0].click();", exclude);
-        //spendinGoodPage.excludeSale.click();
         //5.submit butonuna tiklar
         WebElement submit = spendinGoodPage.submitButton;
         jse.executeScript("arguments[0].scrollIntoView(true);", submit);
@@ -217,7 +215,6 @@ public class US_14_TC_deneme {
         Assert.assertEquals(spendinGoodPage.couponSuccesfullyPublished.getText(), expectedSubmitSonucYazisi);
         Thread.sleep(2000);
         //7.Products kutusundaki üurunlerin girilen urunler ile exclude kutusundaki urunlerin ayni oldugunu  test eder
-        //spendinGoodPage.products.click();
         Assert.assertEquals(spendinGoodPage.choiceProductsKAt.getText(), spendinGoodPage.choiceProductsExcKat.getText());
 
     }
@@ -314,15 +311,8 @@ public class US_14_TC_deneme {
         Thread.sleep(2000);
         //6.Email Restrictions kutusundaki maillerin girilen mailler oldugunu test eder
         Assert.assertEquals(spendinGoodPage.emailRestriction.getAttribute("value"), mailler);
+        Thread.sleep(2000);
 
-          actions.sendKeys(Keys.PAGE_UP).perform();
-          spendinGoodPage.coupons.click();
-
-         for (int i = 0; i <8 ; i++) {
-             Driver.getDriver().findElement(By.xpath("(//*[@class='wcfm_coupon_delete wcfm-action-icon'])[1]")).click();
-             Driver.getDriver().switchTo().alert().accept();
-             Thread.sleep(3000);
-         }
         Driver.closeDriver();
     }
 }

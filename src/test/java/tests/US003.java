@@ -15,7 +15,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class US_03 extends TestBaseRapor{
+public class US003 extends TestBaseRapor{
 
 
         SpendingGoodPage spengood=new SpendingGoodPage();

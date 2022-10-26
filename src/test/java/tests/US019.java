@@ -12,7 +12,7 @@ import utilities.TestBaseRapor;
 
 import java.io.IOException;
 
-public class US_019 extends TestBaseRapor {
+public class US019 extends TestBaseRapor {
 
     //1 Vendor  "http://spendinggood.com/"  adresine  gider
     //2 Vendor 'Sign In' a tıklar
@@ -63,25 +63,24 @@ public class US_019 extends TestBaseRapor {
         //9. Vendor takipcilerin  isimlerini(Name) görür
         String actualFollowers1 = spendingGoodPage.nameEmailActions.getText();
         String expectedFollewers1 = "No data in the table";
-        softAssert.assertNotEquals(actualFollowers1, expectedFollewers1, "Takipcilerin isimleri gorulemedi");
-        extentTest.info("Takipcilerin isimleri görüldü");
+        softAssert.assertEquals(actualFollowers1, expectedFollewers1, "Takipcilerin isimleri gorulemedi");
+        extentTest.info("Takipcilerin isimleri görüntülenemedi");
         //10.Vendor takipcilerin  Email adreslerini(Email) görür
         String actualFollowers2 = spendingGoodPage.nameEmailActions.getText();
         String expectedFollewers2 = "No data in the table";
-        softAssert.assertNotEquals(actualFollowers2, expectedFollewers2, "Takipcilerin Email adresleri gorulemedi");
-        extentTest.info("Takipcilerin Email adresleri görüldü");
+        softAssert.assertEquals(actualFollowers2, expectedFollewers2, "Takipcilerin Email adresleri gorulemedi");
+        extentTest.info("Takipcilerin Email adresleri görüntülenemedi");
         //11.Vendor takipcilerin islemlerini(Actions) görür
         String actualFollowers3 = spendingGoodPage.nameEmailActions.getText();
         String expectedFollewers3 = "No data in the table";
-        softAssert.assertNotEquals(actualFollowers3, expectedFollewers3, "Takipcilerin islemleri gorulemedi");
-        extentTest.info("Takipcilerin islemleri görüldü");
+        softAssert.assertEquals(actualFollowers3, expectedFollewers3, "Takipcilerin islemleri gorulemedi");
+        extentTest.info("Takipcilerin islemleri görüntülenemedi");
         softAssert.assertAll();
-        extentTest.pass("Takipcilerin bilgileri görüldü");
+        extentTest.fail("Bug var:Takipcilerin isimleri, email adresleri ve islemleri görüntülenemedi");
+        ReusableMethods.getScreenshot("Bug");
 
         Driver.closeDriver();
 
 
     }
-
 }
-

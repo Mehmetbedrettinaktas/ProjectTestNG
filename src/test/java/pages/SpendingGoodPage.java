@@ -411,16 +411,14 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//*[@class='shipping_class wcfm_title']")
         public WebElement shippingClass;
 
+         @FindBy(xpath = "//*[text()='Gateaway']")
+         public WebElement gateaway;
 
+         @FindBy(xpath = "//*[@id='wcfm_products_simple_submit_button']")
+         public WebElement submit;
 
-
-
-
-
-
-
-
-
+         @FindBy(xpath = "(//*[contains(text(),'Product Successfully Published.')])[1]")
+         public WebElement yazi;
 
 
 
@@ -483,7 +481,7 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//select[@id='attributes_value_2']")
         public WebElement sizeDdm;
         @FindBy(xpath = "//select[@id='attributes_value_1']")
-        public WebElement colordropDownDown;
+        public WebElement colordropDown;
         @FindBy(xpath = "(//span[@title='Toggle Block'])[3]")
         public WebElement sizedropDownOk;
         @FindBy(id = "wcfm_products_manage_form_toptan-urun-gosterme-ayarlari_head")
@@ -809,8 +807,8 @@ public class SpendingGoodPage {
         public WebElement cart;
         @FindBy (xpath = "//*[.='Checkout']")
         public WebElement checkout;
-       // @FindBy (xpath = "//input[@name='billing_first_name']")
-       // public WebElement firstName;
+        @FindBy (xpath = "//input[@name='billing_first_name']")
+        public WebElement firstName1;
         @FindBy (xpath = "//button[@id='place_order']")
         public WebElement placeOrder;
         @FindBy(xpath = "//li[@class='wc_payment_method payment_method_cod']")
@@ -941,7 +939,36 @@ public class SpendingGoodPage {
 
 
         // ************Suleyman bey ***************
-
+        @FindBy(xpath = "//span[contains(text(),'Reviews')]")
+        public WebElement reviews;
+    @FindBy(xpath = " //span[contains(text(),'Reports')]")
+    public WebElement reports;
+    @FindBy(xpath = "//*[text()='Product Reviews']")
+    public WebElement producktreviews;
+    @FindBy(xpath = "(//*[@class='wcfmmp-author-meta'])[1]")
+    public WebElement author;
+    @FindBy(xpath = "(//*[@class='wcfmmp-comments-content'])[1]")
+    public WebElement comment;
+    @FindBy(xpath = "(//*[@class='wcfmmp-rating'])[1]")
+    public WebElement rating;
+    @FindBy(xpath = "//*[text()='15 October 2022 16:48']")
+    public WebElement dated;
+    @FindBy(xpath = "//*[text()='Year']")
+    public WebElement reportsyear;
+    @FindBy(xpath = "//*[text()='Last Month']")
+    public WebElement lastmonth;
+    @FindBy(xpath = "(//*[text()='This Month'])[1]")
+    public WebElement thismonath;
+    @FindBy(xpath = "//*[text()='Last 7 Days']")
+    public WebElement last7days;
+    @FindBy(xpath = "//*[@class='wcfm-date-range']")
+    public WebElement custom;
+    @FindBy(xpath = "//*[@id='chart-placeholder-canvas']")
+    public WebElement rapor;
+    @FindBy(xpath = "(//div[text()='18'])[1]")
+    public WebElement date1;
+    @FindBy(xpath = "(//div[text()='18'])[2]")
+    public WebElement date2;
 
 
 
