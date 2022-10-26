@@ -679,79 +679,62 @@ public class SpendingGoodPage {
 
 
         // ************ Mustafa Altin Bey ***************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+       // @FindBy(xpath = "//*[text()='Sign In ']")
+       // public WebElement signIn;
+       // @FindBy(xpath = "//button[@class='woocommerce-button button woocommerce-form-login__submit']")
+       // public WebElement signIn2;
+       // @FindBy(xpath = "//*[@id='username']")
+       // public WebElement userName;
+       // @FindBy(xpath = "//*[@id='password']")
+       // public WebElement password;
+       // @FindBy(xpath = "//li[@id='menu-item-1074']")
+       // public WebElement myAccount;
+       // @FindBy(xpath = "//*[text()='Store Manager']")
+       // public WebElement storeManager;
+        @FindBy(xpath = "(//*[@class='text'])[7]")
+        public WebElement customers;
+        //@FindBy(xpath = "//span[@class='wcfmfa fa-user-plus']")
+       // public WebElement addNew;
+        @FindBy(xpath ="//tbody//tr//td")
+        public List<WebElement>kayitlikisiler;
+        @FindBy(xpath ="//th[@class='sorting_asc']")
+        public WebElement name;
+        @FindBy(xpath ="(//th[@class='sorting_disabled'])[1]" )
+        public WebElement username;
+        @FindBy(xpath ="(//*[text()='Email'])[1]" )
+        public WebElement email;
+        @FindBy(xpath ="(//th[@class='sorting_disabled'])[3]" )
+        public WebElement location;
+        @FindBy(xpath ="(//th[@class='sorting_disabled'])[5]" )
+        public WebElement moneySpent;
+        @FindBy(xpath ="(//th[@class='sorting_disabled'])[7]" )
+        public WebElement lastOrder;
+        @FindBy(xpath = "//span[text()='PDF']")
+        public WebElement pdf;
+        @FindBy(xpath = "//span[text()='Excel']")
+        public WebElement exel;
+        @FindBy(xpath = "//span[text()='CSV']")
+        public WebElement cvs;
+        @FindBy(xpath = "//*[@id='user_name']")
+        public WebElement username2;
+       // @FindBy(xpath = "//*[@id='select2-bcountry-container']")
+       // public WebElement country;
+        //@FindBy(css = "#wcfm_customer_submit_button")
+        //public WebElement submit;
+        @FindBy(xpath = "(//*[@class='select2-selection__arrow'])[1]")
+        public WebElement countrySelect;
+        @FindBy(xpath = "//input[@class='select2-search__field']")
+        public WebElement countrySelect2;
+        @FindBy(xpath = "//*[@id='same_as_billing']")
+        public WebElement sameAsBilling;
+        @FindBy(xpath = "//*[@class='wcfm-message wcfm-success']")
+        public WebElement customerSuccessfullySaved;
+        @FindBy(xpath = "//*[@id='sfirst_name']")
+        public WebElement sFirstName;
+        @FindBy(xpath = "(//*[@class='select2-selection__arrow'])[2]")
+        public WebElement scountrySelect;
+        @FindBy(xpath = "//*[@class='select2-search__field']")
+        public WebElement scountrySelect2;
 
 
 
@@ -807,8 +790,8 @@ public class SpendingGoodPage {
         public WebElement cart;
         @FindBy (xpath = "//*[.='Checkout']")
         public WebElement checkout;
-       // @FindBy (xpath = "//input[@name='billing_first_name']")
-       // public WebElement firstName;
+        @FindBy (xpath = "//input[@name='billing_first_name']")
+        public WebElement firstName1;
         @FindBy (xpath = "//button[@id='place_order']")
         public WebElement placeOrder;
         @FindBy(xpath = "//li[@class='wc_payment_method payment_method_cod']")
@@ -1069,18 +1052,17 @@ public class SpendingGoodPage {
 
         // ************ Sefa bey ************
 
+    @FindBy(xpath="(//*[text()='Trending'])[2]")
+    public WebElement TrendingButton;
 
+    @FindBy(xpath = "//li[text()='Trending']")
+    public WebElement TrendingHomePageButton;
 
+    @FindBy (xpath = "//select[@name='orderby']")
+    public WebElement dropDownMenu;
 
-
-
-
-
-
-
-
-
-
+    @FindBy (xpath = "//span[@class='price']")
+    public List<WebElement> urunFiyatHighToLowListWE;
 
 
 
