@@ -88,8 +88,8 @@ public class US018 extends TestBaseRapor {
         spendingGoodPage.cart.click();
         spendingGoodPage.checkout.click();
         ReusableMethods.waitFor(3);
-        spendingGoodPage.firstName.clear();
-        spendingGoodPage.firstName.sendKeys(Faker.instance().name().firstName());
+        spendingGoodPage.firstName1.clear();
+        spendingGoodPage.firstName1.sendKeys(Faker.instance().name().firstName());
         spendingGoodPage.lastName.clear();
         spendingGoodPage.lastName.sendKeys(Faker.instance().name().lastName());
         spendingGoodPage.companyName.clear();
