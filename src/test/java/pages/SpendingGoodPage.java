@@ -1069,18 +1069,17 @@ public class SpendingGoodPage {
 
         // ************ Sefa bey ************
 
+    @FindBy(xpath="(//*[text()='Trending'])[2]")
+    public WebElement TrendingButton;
 
+    @FindBy(xpath = "//li[text()='Trending']")
+    public WebElement TrendingHomePageButton;
 
+    @FindBy (xpath = "//select[@name='orderby']")
+    public WebElement dropDownMenu;
 
-
-
-
-
-
-
-
-
-
+    @FindBy (xpath = "//span[@class='price']")
+    public List<WebElement> urunFiyatHighToLowListWE;
 
 
 
