@@ -17,7 +17,7 @@ import utilities.Driver;
 import java.time.Duration;
 import java.util.List;
 
-public class US012_TC001_TC002_TC003_TC004 {
+public class US012 {
     Select select;
     JavascriptExecutor jse=(JavascriptExecutor) Driver.getDriver();
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));

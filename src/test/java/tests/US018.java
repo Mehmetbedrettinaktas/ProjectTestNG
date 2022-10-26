@@ -15,16 +15,17 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class US_018 extends TestBaseRapor {
+public class US018 extends TestBaseRapor {
 
-    static SpendingGoodPage spendingGoodPage = new SpendingGoodPage();
-    static Actions actions = new Actions(Driver.getDriver());
-    static SoftAssert softAssert = new SoftAssert();
+    static SpendingGoodPage spendingGoodPage;
+    static Actions actions;
+    static SoftAssert softAssert;
     static int requestIDlistSize;
     static int orderIDlistSize;
     static int amountSListSize;
     static int typeListSize;
     static int reasonListSize;
+
 
     static {
         refundSizeMethod();
@@ -33,11 +34,14 @@ public class US_018 extends TestBaseRapor {
     }
 
     public static void refundSizeMethod() {
-        Driver.getDriver().get(ConfigReader.getProperty("spendinggood"));
+
+        actions = new Actions(Driver.getDriver());
+        spendingGoodPage = new SpendingGoodPage();
+        Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         ReusableMethods.waitFor(5);
         spendingGoodPage.signIn1.click();
-        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("userName"));
-        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("password")).sendKeys(Keys.ENTER).perform();
+        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("user"));
+        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("pass")).sendKeys(Keys.ENTER).perform();
         ReusableMethods.waitFor(2);
         spendingGoodPage.myAccount.click();
         spendingGoodPage.storeManager.click();
@@ -61,18 +65,18 @@ public class US_018 extends TestBaseRapor {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView(true);", spendingGoodPage.LogoutButton);
         jse.executeScript("arguments[0].click()", spendingGoodPage.LogoutButton);
-
-
+        Driver.closeDriver();
     }
 
 
     public static void urunEklemeMethod() {
-
-        Driver.getDriver().get(ConfigReader.getProperty("spendinggood"));
+        actions = new Actions(Driver.getDriver());
+        spendingGoodPage = new SpendingGoodPage();
+        Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         ReusableMethods.waitFor(5);
         spendingGoodPage.signIn1.click();
-        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("userName"));
-        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("password")).sendKeys(Keys.ENTER).perform();
+        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("user"));
+        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("pass")).sendKeys(Keys.ENTER).perform();
         ReusableMethods.waitFor(2);
         spendingGoodPage.search.sendKeys("T-Shirt", Keys.ENTER);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
@@ -84,8 +88,8 @@ public class US_018 extends TestBaseRapor {
         spendingGoodPage.cart.click();
         spendingGoodPage.checkout.click();
         ReusableMethods.waitFor(3);
-        spendingGoodPage.firstName.clear();
-        spendingGoodPage.firstName.sendKeys(Faker.instance().name().firstName());
+        spendingGoodPage.firstName1.clear();
+        spendingGoodPage.firstName1.sendKeys(Faker.instance().name().firstName());
         spendingGoodPage.lastName.clear();
         spendingGoodPage.lastName.sendKeys(Faker.instance().name().lastName());
         spendingGoodPage.companyName.clear();
@@ -124,17 +128,19 @@ public class US_018 extends TestBaseRapor {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         JavascriptExecutor js4 = (JavascriptExecutor) Driver.getDriver();
         js4.executeScript("arguments[0].click()", spendingGoodPage.logOut2);
-
+        Driver.closeDriver();
 
     }
 
 
     @Test()
-    public static void testTC01() {
-        // US_18_TC01-->Vendor olarak gelen siparisi onaylayabilmeliyim
+    public static void testTC01() {// US_18_TC01-->Vendor olarak gelen siparisi onaylayabilmeliyim
+        actions = new Actions(Driver.getDriver());
+        softAssert = new SoftAssert();
+        spendingGoodPage = new SpendingGoodPage();
         extentTest = extentReports.createTest("Siparis onay", "Siparis edilen ürün onaylanmasi");
         //1 Vendor  "http://spendinggood.com/"  adresine  gider
-        Driver.getDriver().get(ConfigReader.getProperty("spendinggood"));
+        Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         extentTest.info("SpendingGood sayfasina gidildi");
         //2 Vendor 'Sign In' a tıklar
         spendingGoodPage.signIn1.click();
@@ -142,9 +148,9 @@ public class US_018 extends TestBaseRapor {
         //3.Vendor  gecerli Username girer
         //4.Vendor gecerli Password girer
         //5.Vendor 'SIGN IN' butonuna tiklar
-        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("userName"));
+        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("user"));
         extentTest.info("Gecerli Username girildi");
-        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("password")).sendKeys(Keys.ENTER).perform();
+        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("pass")).sendKeys(Keys.ENTER).perform();
         extentTest.info("Gecerli password girildi ve SIGN IN  butonuna tiklandi");
         ReusableMethods.waitFor(2);
         //6.Vendor 'My Account' a tiklar
@@ -171,20 +177,22 @@ public class US_018 extends TestBaseRapor {
         softAssert.assertTrue(spendingGoodPage.viewDetails.isDisplayed());
         extentTest.pass("Ürünün onaylandigi dogrulandi");
         softAssert.assertAll();
-        //  extentTest.pass("Gelen siparis onaylandi");
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
-        jse.executeScript("arguments[0].scrollIntoView(true);", SpendingGoodPage.LogoutButton);
-        jse.executeScript("arguments[0].click()", SpendingGoodPage.LogoutButton);
-
+        jse.executeScript("arguments[0].scrollIntoView(true);", spendingGoodPage.LogoutButton);
+        jse.executeScript("arguments[0].click()", spendingGoodPage.LogoutButton);
+        Driver.closeDriver();
 
     }
 
     @Test(dependsOnMethods = "testTC01")
+    //US_18 TC_02-->Store manager olarak ürünü geri iade talebinde bulunabilabilmeliyim
     public static void testTC02() {
-        //US_18 TC_02-->Store manager olarak ürünü geri iade talebinde bulunabilabilmeliyim
+        actions = new Actions(Driver.getDriver());
+        softAssert = new SoftAssert();
+        spendingGoodPage = new SpendingGoodPage();
         extentTest = extentReports.createTest("Iade talebi", "Siparis edilen ürünü geri iade talebinde bulunma");
         // Vendor  "http://spendinggood.com/"  adresine  gider
-        Driver.getDriver().get(ConfigReader.getProperty("spendinggood"));
+        Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         extentTest.info("SpendingGood sayfasina gidildi");
         //2 Vendor 'Sign In' a tıklar
         ReusableMethods.waitFor(3);
@@ -194,11 +202,11 @@ public class US_018 extends TestBaseRapor {
         //3.Vendor  gecerli Username girer
         //4.Vendor gecerli Password girer
         //5.Vendor 'SIGN IN' butonuna tiklar
-        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("userName"));
+        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("user"));
         extentTest.info("Gecerli Username girildi");
-        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("password")).sendKeys(Keys.ENTER).perform();
+        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("pass")).sendKeys(Keys.ENTER).perform();
         extentTest.info("Gecerli password girildi ve SIGN IN  butonuna tiklandi");
-        ReusableMethods.waitFor(2);
+        ReusableMethods.waitFor(3);
         //6.Vendor 'My Account' a tiklar
         spendingGoodPage.myAccount.click();
         extentTest.info("My Account'a tiklandi");
@@ -232,21 +240,23 @@ public class US_018 extends TestBaseRapor {
         softAssert.assertEquals(expectedSucces, actualSucces);
         extentTest.pass("Refund requests successfully processed. yazisi dogrulandi");
         softAssert.assertAll();
-        //   extentTest.pass("Geri iade etme talabinde bulunuldu");
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
-        jse.executeScript("arguments[0].scrollIntoView(true);", SpendingGoodPage.LogoutButton);
-        jse.executeScript("arguments[0].click()", SpendingGoodPage.LogoutButton);
-
+        jse.executeScript("arguments[0].scrollIntoView(true);", spendingGoodPage.LogoutButton);
+        jse.executeScript("arguments[0].click()", spendingGoodPage.LogoutButton);
+        Driver.closeDriver();
 
     }
 
 
     @Test(dependsOnMethods = "testTC02")
+    // US_18 TC_03-->Vendor olarak geri iade edilen ürünün RequestID,OrderID,Amount,Type ve Reason'u görebilmeliyim
     public static void testTC03() {
-        // US_18 TC_03-->Vendor olarak geri iade edilen ürünün RequestID,OrderID,Amount,Type ve Reason'u görebilmeliyim
+        actions = new Actions(Driver.getDriver());
+        softAssert = new SoftAssert();
+        spendingGoodPage = new SpendingGoodPage();
         extentTest = extentReports.createTest("Iade bilgileri", "Iade edilen ürünün bilgilarini görüntüleme");
         //1 Vendor  "http://spendinggood.com/"  adresine  gider
-        Driver.getDriver().get(ConfigReader.getProperty("spendinggood"));
+        Driver.getDriver().get(ConfigReader.getProperty("spengood"));
         extentTest.info("SpendingGood sayfasina gidildi");
         //2 Vendor 'Sign In' a tıklare
         ReusableMethods.waitFor(5);
@@ -254,9 +264,9 @@ public class US_018 extends TestBaseRapor {
         //3.Vendor  gecerli Username girer
         //4.Vendor gecerli Password girer
         //5.Vendor 'SIGN IN' butonuna tiklar
-        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("userName"));
+        spendingGoodPage.userName.sendKeys(ConfigReader.getProperty("user"));
         extentTest.info("Gecerli Username girildi");
-        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("password")).sendKeys(Keys.ENTER).perform();
+        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("pass")).sendKeys(Keys.ENTER).perform();
         extentTest.info("Gecerli password girildi ve SIGN IN  butonuna tiklandi");
         ReusableMethods.waitFor(2);
         //6.Vendor 'My Account' a tiklar
@@ -305,8 +315,10 @@ public class US_018 extends TestBaseRapor {
         softAssert.assertFalse(spendingGoodPage.reasonList.get(reasonListSize - 1).getText().isEmpty());
         softAssert.assertTrue(spendingGoodPage.reasonList.get(reasonListSize - 1).isDisplayed());
         extentTest.pass("Ürünün geri iade edilme sebebi (Reason) görüldü");
-
+        softAssert.assertAll();
+        Driver.closeDriver();
 
     }
 }
+
 
