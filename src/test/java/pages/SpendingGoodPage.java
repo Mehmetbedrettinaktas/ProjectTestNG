@@ -411,16 +411,14 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//*[@class='shipping_class wcfm_title']")
         public WebElement shippingClass;
 
+         @FindBy(xpath = "//*[text()='Gateaway']")
+         public WebElement gateaway;
 
+         @FindBy(xpath = "//*[@id='wcfm_products_simple_submit_button']")
+         public WebElement submit;
 
-
-
-
-
-
-
-
-
+         @FindBy(xpath = "(//*[contains(text(),'Product Successfully Published.')])[1]")
+         public WebElement yazi;
 
 
 
@@ -483,7 +481,7 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//select[@id='attributes_value_2']")
         public WebElement sizeDdm;
         @FindBy(xpath = "//select[@id='attributes_value_1']")
-        public WebElement colordropDownDown;
+        public WebElement colordropDown;
         @FindBy(xpath = "(//span[@title='Toggle Block'])[3]")
         public WebElement sizedropDownOk;
         @FindBy(id = "wcfm_products_manage_form_toptan-urun-gosterme-ayarlari_head")
