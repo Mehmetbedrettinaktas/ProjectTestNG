@@ -65,7 +65,6 @@ public class US018 extends TestBaseRapor {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView(true);", spendingGoodPage.LogoutButton);
         jse.executeScript("arguments[0].click()", spendingGoodPage.LogoutButton);
-
         Driver.closeDriver();
     }
 
@@ -121,14 +120,12 @@ public class US018 extends TestBaseRapor {
         jse.executeScript("arguments[0].scrollIntoView(true);", spendingGoodPage.placeOrder);
         jse.executeScript("arguments[0].click()", spendingGoodPage.placeOrder);
         ReusableMethods.waitFor(2);
-        // spendinGoodPage.signOut.click();
         String expectedThankYou = "Thank you. Your order has been received.";
         String actualThankYou = spendingGoodPage.thankYou.getText();
         System.out.println(actualThankYou);
         Assert.assertEquals(expectedThankYou, actualThankYou);
         spendingGoodPage.signOut.click();
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        //  spendinGoodPage.logOut2.click();
         JavascriptExecutor js4 = (JavascriptExecutor) Driver.getDriver();
         js4.executeScript("arguments[0].click()", spendingGoodPage.logOut2);
         Driver.closeDriver();
@@ -137,13 +134,10 @@ public class US018 extends TestBaseRapor {
 
 
     @Test()
-    public static void testTC01() {
+    public static void testTC01() {// US_18_TC01-->Vendor olarak gelen siparisi onaylayabilmeliyim
         actions = new Actions(Driver.getDriver());
         softAssert = new SoftAssert();
         spendingGoodPage = new SpendingGoodPage();
-
-        // US_18_TC01-->Vendor olarak gelen siparisi onaylayabilmeliyim
-
         extentTest = extentReports.createTest("Siparis onay", "Siparis edilen ürün onaylanmasi");
         //1 Vendor  "http://spendinggood.com/"  adresine  gider
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
@@ -183,8 +177,6 @@ public class US018 extends TestBaseRapor {
         softAssert.assertTrue(spendingGoodPage.viewDetails.isDisplayed());
         extentTest.pass("Ürünün onaylandigi dogrulandi");
         softAssert.assertAll();
-        //  extentTest.pass("Gelen siparis onaylandi");
-
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView(true);", spendingGoodPage.LogoutButton);
         jse.executeScript("arguments[0].click()", spendingGoodPage.LogoutButton);
@@ -192,12 +184,12 @@ public class US018 extends TestBaseRapor {
 
     }
 
-    @Test (dependsOnMethods = "testTC01")
+    @Test(dependsOnMethods = "testTC01")
+    //US_18 TC_02-->Store manager olarak ürünü geri iade talebinde bulunabilabilmeliyim
     public static void testTC02() {
         actions = new Actions(Driver.getDriver());
         softAssert = new SoftAssert();
         spendingGoodPage = new SpendingGoodPage();
-        //US_18 TC_02-->Store manager olarak ürünü geri iade talebinde bulunabilabilmeliyim
         extentTest = extentReports.createTest("Iade talebi", "Siparis edilen ürünü geri iade talebinde bulunma");
         // Vendor  "http://spendinggood.com/"  adresine  gider
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
@@ -248,7 +240,6 @@ public class US018 extends TestBaseRapor {
         softAssert.assertEquals(expectedSucces, actualSucces);
         extentTest.pass("Refund requests successfully processed. yazisi dogrulandi");
         softAssert.assertAll();
-        //   extentTest.pass("Geri iade etme talabinde bulunuldu");
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView(true);", spendingGoodPage.LogoutButton);
         jse.executeScript("arguments[0].click()", spendingGoodPage.LogoutButton);
@@ -258,12 +249,11 @@ public class US018 extends TestBaseRapor {
 
 
     @Test(dependsOnMethods = "testTC02")
+    // US_18 TC_03-->Vendor olarak geri iade edilen ürünün RequestID,OrderID,Amount,Type ve Reason'u görebilmeliyim
     public static void testTC03() {
         actions = new Actions(Driver.getDriver());
         softAssert = new SoftAssert();
         spendingGoodPage = new SpendingGoodPage();
-        // US_18 TC_03-->Vendor olarak geri iade edilen ürünün RequestID,OrderID,Amount,Type ve Reason'u görebilmeliyim
-
         extentTest = extentReports.createTest("Iade bilgileri", "Iade edilen ürünün bilgilarini görüntüleme");
         //1 Vendor  "http://spendinggood.com/"  adresine  gider
         Driver.getDriver().get(ConfigReader.getProperty("spengood"));
@@ -325,9 +315,10 @@ public class US018 extends TestBaseRapor {
         softAssert.assertFalse(spendingGoodPage.reasonList.get(reasonListSize - 1).getText().isEmpty());
         softAssert.assertTrue(spendingGoodPage.reasonList.get(reasonListSize - 1).isDisplayed());
         extentTest.pass("Ürünün geri iade edilme sebebi (Reason) görüldü");
-
+        softAssert.assertAll();
         Driver.closeDriver();
 
     }
 }
+
 
