@@ -9,7 +9,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US_021 {
+public class US021 {
 
     //1 Vendor  "http://spendinggood.com/"  adresine  gider
     //2 Vendor 'Sign In' a tıklar

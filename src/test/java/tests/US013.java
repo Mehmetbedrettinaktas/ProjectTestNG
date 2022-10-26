@@ -13,7 +13,9 @@ import pages.SpendingGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_013 {
+
+public class US013 {
+
     SpendingGoodPage spendinGoodPage = new SpendingGoodPage();
     Actions actions = new Actions(Driver.getDriver());
     JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
