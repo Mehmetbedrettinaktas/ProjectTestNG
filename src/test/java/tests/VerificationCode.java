@@ -10,19 +10,15 @@ import utilities.ReusableMethods;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VerificationCodeMethodFatma {
-
-        static String email;
-
-        static int code;
+public class VerificationCode {
+      static String email;
+      static int code;
 
         public static void getEmailCode() {
 
             SpendingGoodPage page= new SpendingGoodPage();
 
             ReusableMethods.waitFor(2);
-
-            //yeni tabda gecici email sitesine git
 
             Driver.getDriver().switchTo().newWindow(WindowType.TAB);
 
@@ -39,7 +35,7 @@ public class VerificationCodeMethodFatma {
 
             ReusableMethods.waitFor(2);
 
-            SpendingGoodPage.EmailBox.sendKeys(VerificationCodeMethodFatma.email);
+            SpendingGoodPage.EmailBox.sendKeys(VerificationCode.email);
             ReusableMethods.waitFor(1);
 
             SpendingGoodPage.verificationCodeBox.click();

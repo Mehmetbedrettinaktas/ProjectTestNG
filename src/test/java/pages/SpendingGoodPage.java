@@ -5,9 +5,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+
 import java.util.List;
 
 public class SpendingGoodPage {
+
 
 
         public SpendingGoodPage() {
@@ -17,33 +19,18 @@ public class SpendingGoodPage {
         }
 // ******************  Fatma Hanim ***************************
 
-        // SIGN IN //
-
         @FindBy(css = ".login.inline-type")
-        public static WebElement ilksignButton;
-
+        public static WebElement SignIn;
         @FindBy(xpath = "//*[@id='username']")
         public static WebElement SignemailBox;
-
-        @FindBy(css = "#password")
-        public WebElement passwordBox;
-
-        @FindBy(css = ".woocommerce-form-login__submit")
-        public WebElement ikinciSignIn;
         @FindBy(xpath = "(//a[.='My Account'])[1]")
         public static WebElement myAccountLink;
-
         @FindBy(css = "div>h2.page-title")
         public static WebElement myAccountTitle;
-        //MY ACCOUNT LISTE YAZDIRMA LOCATELERI //
         @FindBy(css = ".icon-box.text-center>a>p")
         public static List<WebElement> myAccountPageList;
-
         @FindBy(css = ".woocommerce-MyAccount-navigation>ul>li")
         public static List<WebElement> dashboardList;
-
-        //REGISTER LOCATELERI ///
-
         @FindBy(css = ".register.inline-type")
         public static WebElement register;
         @FindBy(xpath = "//*[text()='Become a Vendor']  ")
@@ -64,35 +51,18 @@ public class SpendingGoodPage {
         public static WebElement storeManagerTitle;
         @FindBy(xpath = "//*[@id=\"wcfm_menu\"]/div[18]/a/span[2]")
         public static WebElement LogoutButton;
-
-
-        /////VENDOR HESABI NEGATIF TESTLER ICIN  ////
-
-        @FindBy(xpath = "//input[@id='wcfm_membership_register_button']")
-        public static WebElement registerbutton;
         @FindBy(xpath = "//*[text()='Email: This field is required.']")
         public static WebElement bosEmailHataMesaji;
-
         @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
         public static WebElement gecersizEmailHataMesaji;
 
-        @FindBy(xpath = "//*[text()='Registration Successfully Completed.']")
-        public static WebElement gecersizPasswordHataliMesaji;
 
-        //verification code div.email method classi
         @FindBy(css = "div.email")
         public static WebElement geciciEmail;
-        @FindBy(css = "a#renew")
-        public WebElement emailBoxRefresh;
         @FindBy(xpath = "//tbody//tr[1]")
         public static WebElement geciciEmailBox;
-        @FindBy(xpath = "//tbody//tr[2]")
-        public WebElement onayEmail;
         @FindBy(xpath = "//*[@id='body_content_inner']")
         public static WebElement verificationCode;
-        @FindBy(xpath = "//*[.='Visit now ...']")
-        public WebElement visitNow;
-
 
         // ************ Mihrican Hanim ************
 
@@ -125,13 +95,7 @@ public class SpendingGoodPage {
 
 
 
-
-
-
-
-
-
-        @FindBy(xpath = "//*[@id='order_comments']")
+       @FindBy(xpath = "//*[@id='order_comments']")
         public WebElement orderNotes;
         @FindBy(xpath = "//*[text()='Product']")
         public WebElement myOrderproduct;
@@ -166,108 +130,7 @@ public class SpendingGoodPage {
        public WebElement closeButton;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // ************ Sirin Hanim ************
+ // ************ Sirin Hanim ************
         //US_005
 
         @FindBy(xpath = "//tbody")
@@ -355,20 +218,7 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//input[@value='55']")
         public WebElement Sterling;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // ************ Mehmet Akin Bey ***********************
+   // ************ Mehmet Akin Bey ***********************
         @FindBy(xpath = "//*[text()='Sign In ']")
         public WebElement signIn;
 
@@ -419,50 +269,6 @@ public class SpendingGoodPage {
 
          @FindBy(xpath = "(//*[contains(text(),'Product Successfully Published.')])[1]")
          public WebElement yazi;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         // ************ Mehmet Aktas Bey ***************
@@ -518,61 +324,6 @@ public class SpendingGoodPage {
         public WebElement accountDetailsButton;
         @FindBy(xpath= "//input[@id='account_first_name']")
         public WebElement firstName;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         // ******************** Mustafa Bek Bey ***************
@@ -655,30 +406,7 @@ public class SpendingGoodPage {
         @FindBy(xpath = "(//*[@class='coupon-types coupon-types-percent'])[1]")
         public WebElement discountTyp;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // ************ Mustafa Altin Bey ***************
+  // ************ Mustafa Altin Bey ***************
        // @FindBy(xpath = "//*[text()='Sign In ']")
        // public WebElement signIn;
        // @FindBy(xpath = "//button[@class='woocommerce-button button woocommerce-form-login__submit']")
@@ -736,32 +464,7 @@ public class SpendingGoodPage {
         @FindBy(xpath = "//*[@class='select2-search__field']")
         public WebElement scountrySelect2;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // ************ Abdurrahim Bey ***************
+  // ************ Abdurrahim Bey ***************
         @FindBy(xpath = "//*[text()='Sign In ']")
         public WebElement signIn1;
         @FindBy(xpath = "//span[contains(text(),'Refund')]")
@@ -790,8 +493,8 @@ public class SpendingGoodPage {
         public WebElement cart;
         @FindBy (xpath = "//*[.='Checkout']")
         public WebElement checkout;
-       // @FindBy (xpath = "//input[@name='billing_first_name']")
-       // public WebElement firstName;
+        @FindBy (xpath = "//input[@name='billing_first_name']")
+        public WebElement firstName1;
         @FindBy (xpath = "//button[@id='place_order']")
         public WebElement placeOrder;
         @FindBy(xpath = "//li[@class='wc_payment_method payment_method_cod']")
@@ -844,86 +547,10 @@ public class SpendingGoodPage {
         public WebElement nameEmailActions;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // ************Suleyman bey ***************
-        @FindBy(xpath = "//span[contains(text(),'Reviews')]")
-        public WebElement reviews;
+ 
+    // ************Suleyman bey ***************
+    @FindBy(xpath = "//span[contains(text(),'Reviews')]")
+    public WebElement reviews;
     @FindBy(xpath = " //span[contains(text(),'Reports')]")
     public WebElement reports;
     @FindBy(xpath = "//*[text()='Product Reviews']")
@@ -953,200 +580,21 @@ public class SpendingGoodPage {
     @FindBy(xpath = "(//div[text()='18'])[2]")
     public WebElement date2;
 
+    // ************ Sefa bey ************
 
+    @FindBy(xpath = "(//*[text()='Trending'])[2]")
+    public WebElement TrendingButton;
 
+    @FindBy(xpath = "//li[text()='Trending']")
+    public WebElement TrendingHomePageButton;
 
+    @FindBy(xpath = "//select[@name='orderby']")
+    public WebElement dropDownMenu;
 
+    @FindBy(xpath = "//span[@class='price']")
+    public List<WebElement> urunFiyatHighToLowListWE;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // ************ Sefa bey ************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+}
 
 

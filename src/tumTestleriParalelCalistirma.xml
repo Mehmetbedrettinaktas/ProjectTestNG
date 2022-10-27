@@ -3,7 +3,7 @@
     <!-- verson  paralel testi classlarda calistiriyoruz thread-count  browser saysini belirtiyoruz-->
     <test name="regression test">
         <packages>
-            <package name="tests.*"/>
+            <package name=""/>
         </packages>
     </test>
 </suite>
