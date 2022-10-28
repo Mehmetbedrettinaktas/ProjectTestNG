@@ -92,10 +92,7 @@ public class SpendingGoodPage {
         public WebElement ClearTextYazisi;
         @FindBy(xpath = "//p[text()='No products in the cart.']")
         public WebElement cartNoProductsYazisi;
-
-
-
-       @FindBy(xpath = "//*[@id='order_comments']")
+        @FindBy(xpath = "//*[@id='order_comments']")
         public WebElement orderNotes;
         @FindBy(xpath = "//*[text()='Product']")
         public WebElement myOrderproduct;
