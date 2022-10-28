@@ -349,6 +349,7 @@ public class US004 {
             Thread.sleep(3000);
             spengood.cartNoProductsYazisi.isDisplayed();
             Driver.closeDriver();
+
         }
     }
 
