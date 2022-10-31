@@ -240,8 +240,8 @@ public class US003 extends TestBaseRapor{
             //8. Vendor acilan sayfada BILLING DETAILS e gelir
             //9. VendorFirst name,Last name,Company name bilgilerini girer
             ReusableMethods.waitFor(2);
-            spengood.firstName.clear();
-            spengood.firstName.sendKeys("Ahmet4");
+            spengood.billingFirstName.clear();
+            spengood.billingFirstName.sendKeys("Ahmet4");
             spengood.lastName.clear();
             spengood.lastName.sendKeys("Tahmin4");
             spengood.companyName.clear();
@@ -266,7 +266,7 @@ public class US003 extends TestBaseRapor{
             //12. Vendor eger isterse Order notes yazar
             spengood.orderNotes.sendKeys("Adres bilgileri tam dolduruldu",Keys.ENTER);
             extentTest.info("Adres bilgileri eksiksiz dolduruldu");
-            Driver.closeDriver();
+           // Driver.closeDriver();
 
         }
 
@@ -302,8 +302,8 @@ public class US003 extends TestBaseRapor{
             //  7. Vendor chockout a tiklar
             spengood.checkout.click();
             //  8. Vendor BILLING DETAILS e gelir ve adress bilgilerini eksiksiz girer
-            spengood.firstName.clear();
-            spengood.firstName.sendKeys("Ahmet4");
+            spengood.billingFirstName.clear();
+            spengood.billingFirstName.sendKeys("Ahmet4");
             spengood.lastName.clear();
             spengood.lastName.sendKeys("Tahmin4");
             spengood.companyName.clear();
@@ -344,7 +344,7 @@ public class US003 extends TestBaseRapor{
             Assert.assertEquals(expectedThankYou, actualThankYou);
             extentTest.info("Place Ordera tiklandi");
             extentTest.info("Thank you. Your order has been received yazisi goruldu");
-            Driver.closeDriver();
+           // Driver.closeDriver();
 
 
         }

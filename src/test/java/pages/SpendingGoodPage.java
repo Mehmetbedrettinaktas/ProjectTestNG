@@ -125,7 +125,8 @@ public class SpendingGoodPage {
 
        @FindBy(xpath = "//a[@class='btn btn-dark btn-link btn-icon-right btn-close']")
        public WebElement closeButton;
-
+    @FindBy(xpath = "//input[@name='billing_first_name']")
+    public WebElement billingFirstName;
 
  // ************ Sirin Hanim ************
         //US_005
