@@ -127,6 +127,19 @@ public class SpendingGoodPage {
        public WebElement closeButton;
     @FindBy(xpath = "//input[@name='billing_first_name']")
     public WebElement billingFirstName;
+    @FindBy(xpath = "//*[@name='add-to-cart']")
+    public static WebElement sepeteEkle;
+
+    @FindBy(css = ".product-details>h3>a")
+    public static List<WebElement> conList;
+
+    @FindBy(xpath = "(//*[@class='cart-count'])[1]")
+    public static WebElement sepetCount;
+    @FindBy(xpath = "//button[@class='button alt']")
+    public static WebElement placeorder;
+
+    @FindBy(xpath = "//label[@for='payment_method_cod']")
+    public static WebElement payatheDoor;
 
     @FindBy(xpath = "//label[@for='payment_method_cod']")
     public static WebElement payatheDoor;
